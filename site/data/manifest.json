@@ -1,60 +1,60 @@
 {
   "sample": true,
-  "generated": "2026-03-21T00:57:42.179362Z",
-  "last_run": "2026-03-21T00:57:42.179362Z",
+  "generated": "2026-03-21T01:14:05.713849Z",
+  "last_run": "2026-03-21T01:14:05.713849Z",
   "note": "Sample data for development. Connect live API pipelines for real data.",
   "sources": {
     "census_gov_finances": {
-      "last_updated": "2026-03-21T00:57:42.179362Z",
+      "last_updated": "2026-03-21T01:14:05.713849Z",
       "status": "sample",
       "description": "Census Annual Survey of State & Local Government Finances",
       "record_count": 50,
       "data_year": "FY2022 (sample)"
     },
     "usaspending": {
-      "last_updated": "2026-03-21T00:57:42.179362Z",
+      "last_updated": "2026-03-21T01:14:05.713849Z",
       "status": "sample",
       "description": "Federal spending to states",
       "record_count": 50,
       "data_year": "FY2024 (sample)"
     },
     "bea_regional": {
-      "last_updated": "2026-03-21T00:57:42.179362Z",
+      "last_updated": "2026-03-21T01:14:05.713849Z",
       "status": "sample",
       "description": "State GDP and personal income",
       "record_count": 50,
       "data_year": "2023 (sample)"
     },
     "fred": {
-      "last_updated": "2026-03-21T00:57:42.179362Z",
+      "last_updated": "2026-03-21T01:14:05.713849Z",
       "status": "sample",
       "description": "Economic time series",
       "record_count": 0,
       "data_year": "N/A (sample)"
     },
     "medicaid_cms": {
-      "last_updated": "2026-03-21T00:57:42.179362Z",
+      "last_updated": "2026-03-21T01:14:05.713849Z",
       "status": "sample",
       "description": "Medicaid expenditure by state",
       "record_count": 50,
       "data_year": "FY2023 (sample)"
     },
     "treasury_fiscal": {
-      "last_updated": "2026-03-21T00:57:42.179362Z",
+      "last_updated": "2026-03-21T01:14:05.713849Z",
       "status": "sample",
       "description": "Federal fiscal data",
       "record_count": 0,
       "data_year": "N/A (sample)"
     },
     "ppd_pensions": {
-      "last_updated": "2026-03-21T00:57:42.179362Z",
+      "last_updated": "2026-03-21T01:14:05.713849Z",
       "status": "sample",
       "description": "Public pension plan data",
       "record_count": 50,
       "data_year": "FY2023 (sample)"
     },
     "pew_reserves": {
-      "last_updated": "2026-03-21T00:57:42.179362Z",
+      "last_updated": "2026-03-21T01:14:05.713849Z",
       "status": "sample",
       "description": "Rainy day fund balances",
       "record_count": 50,

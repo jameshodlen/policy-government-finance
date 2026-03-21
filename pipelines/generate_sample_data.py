@@ -17,6 +17,8 @@ import math
 from datetime import datetime
 from pathlib import Path
 
+from pipelines.config import BIENNIAL_BUDGET_STATES
+
 # Ensure reproducible sample data
 random.seed(42)
 
@@ -151,11 +153,19 @@ def generate_state_summary(abbrev, name, fips, pop, gdp):
 
     # Draw raw component weights, then normalize to sum to base_rev
     # This prevents negative otherRevenue from percentage overflows
-    raw_income = 0 if abbrev in NO_INCOME_TAX else random.uniform(0.25, 0.40)
-    raw_sales = random.uniform(0.20, 0.35)
+    # No-income-tax states get higher sales/other weights to avoid
+    # inflated federal dependency ratios from a smaller weight pool
+    if abbrev in NO_INCOME_TAX:
+        raw_income = 0
+        raw_sales = random.uniform(0.35, 0.55)
+        raw_other = random.uniform(0.15, 0.30)
+    else:
+        raw_income = random.uniform(0.25, 0.40)
+        raw_sales = random.uniform(0.20, 0.35)
+        raw_other = random.uniform(0.05, 0.15)
+
     raw_property = random.uniform(0.01, 0.05)
     raw_federal = random.uniform(0.25, 0.40)
-    raw_other = random.uniform(0.05, 0.15)
 
     total_weight = raw_income + raw_sales + raw_property + raw_federal + raw_other
     income_tax = base_rev * (raw_income / total_weight)
@@ -242,9 +252,7 @@ def generate_state_summary(abbrev, name, fips, pop, gdp):
 
         # Flags
         "hasIncomeTax": abbrev not in NO_INCOME_TAX,
-        "biennialBudget": abbrev in ["CT", "HI", "IN", "KY", "ME", "MN", "MT",
-                                      "NE", "NH", "NC", "ND", "OH", "OR", "TX",
-                                      "VA", "WA", "WI", "WV", "WY"],
+        "biennialBudget": abbrev in BIENNIAL_BUDGET_STATES,
     }
 
 
