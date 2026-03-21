@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The $1.3 Trillion Pension Problem — State Finance Platform</title>
+  <meta name="description" content="50-state pension analysis: funded ratios, unfunded liabilities, contribution burdens. How pension obligations crowd out current services.">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <nav class="site-nav"></nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>The $1.3 Trillion Pension Problem</h1>
+      <p class="subtitle">National funded ratio ~77.4%. From Wisconsin's 102.5% to Illinois's 40.1% &mdash; how unfunded liabilities crowd out current services, and what states that improved did differently.</p>
+    </div>
+
+    <!-- Key Stats -->
+    <section class="section">
+      <div class="summary-stats" id="pension-summary-stats"></div>
+      <div id="pension-freshness" style="text-align:right;margin-top:0.5rem;"></div>
+    </section>
+
+    <!-- Scatter Plot: Funded Ratio vs Contribution Burden -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Funded Ratio vs. Contribution Burden</h2>
+      </div>
+      <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+        States with lower funded ratios generally face higher contribution burdens, crowding out spending on education, infrastructure, and other current services. Highlighted states include WI, MN, IL, NJ, CT, and KY.
+      </p>
+      <div class="chart-container" id="scatter-plot" style="min-height:450px;"></div>
+    </section>
+
+    <!-- 50-State Table -->
+    <section class="section">
+      <div class="section-header">
+        <h2>50-State Pension Comparison</h2>
+      </div>
+      <div id="pension-table"></div>
+    </section>
+
+    <!-- WI vs MN Spotlight -->
+    <section class="section">
+      <h2>Spotlight: Wisconsin vs. Minnesota</h2>
+      <div class="content-grid two-col">
+        <div class="card">
+          <h3>Wisconsin</h3>
+          <p>Funded ratio: <strong>102.5%</strong> — one of only two states above 100%.</p>
+          <p>The Wisconsin Retirement System (WRS) uses a unique risk-sharing mechanism. Investment gains and losses are distributed between active members and retirees through annual adjustments to benefit payments. This creates automatic fiscal stabilization without requiring legislative action.</p>
+          <p>Key factors: mandatory participation, shared-risk design, conservative but consistent investment strategy, no ad hoc benefit increases without funding.</p>
+        </div>
+        <div class="card">
+          <h3>Minnesota</h3>
+          <p>Funded ratio: <strong>83.6%</strong> — above the national median of ~77.4%.</p>
+          <p>Minnesota operates three major pension systems: MSRS (state employees), PERA (local government), and TRA (teachers). The state has taken incremental reform steps including contribution rate increases and benefit formula adjustments.</p>
+          <p>Challenge: unfunded liabilities have grown relative to own-source revenue, though less dramatically than national peers.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology Note -->
+    <section class="section">
+      <div class="card" style="border-left:3px solid var(--color-accent);">
+        <h3>Methodology Note: GASB 67/68 Transition</h3>
+        <p>Pension funded ratios reported before and after FY2014-2015 are <strong>not directly comparable</strong>. GASB Statements 67 and 68 changed how pension liabilities are measured, generally resulting in higher reported unfunded liabilities. This platform flags all pre-GASB 67/68 data accordingly.</p>
+        <p>Data source: <a href="https://publicplansdata.org" target="_blank" rel="noopener">Public Plans Database</a> (Boston College Center for Retirement Research), covering 230+ major state and local plans representing 95% of public pension membership.</p>
+        <p style="font-size:0.85rem;color:var(--color-text-muted);">
+          Investment return assumptions vary from ~6.0% to ~7.5% across plans. Higher assumptions produce higher funded ratios. Some analysts argue market-based discount rates (typically lower) provide a more conservative and comparable measure. This platform reports plan-stated assumptions by default.
+        </p>
+      </div>
+    </section>
+
+    <!-- Competing Lenses -->
+    <section class="section">
+      <h2>Competing Analytical Perspectives</h2>
+      <div class="lenses-container">
+        <div class="lens-card equity">
+          <div class="lens-label">Equity &amp; Adequacy</div>
+          <p>Pension promises are a social contract with public workers who often accepted lower pay in exchange for retirement security. Cutting benefits for current retirees breaks this contract. The focus should be on adequate funding going forward, not benefit reductions. Many public employees — especially teachers and first responders — are not covered by Social Security, making pensions their primary retirement income.</p>
+        </div>
+        <div class="lens-card efficiency">
+          <div class="lens-label">Efficiency &amp; Growth</div>
+          <p>Unfunded pension liabilities represent hidden government debt that crowds out current services and infrastructure investment. States should transition new hires to defined-contribution plans (like private-sector 401k) to limit taxpayer risk. Illinois pension contributions grew from $614M (FY1996) to $11.2B (FY2025) — money that could fund education or tax relief.</p>
+        </div>
+        <div class="lens-card process">
+          <div class="lens-label">Process &amp; Governance</div>
+          <p>The core problem is governance, not plan design. States that maintain adequate contributions, use realistic assumptions, and avoid benefit sweeteners without funding have well-funded plans regardless of DB vs DC structure. Wisconsin (DB, 102.5% funded) outperforms many states with hybrid or DC plans. The Volcker Alliance grades budget transparency around legacy cost disclosure.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/pensions.js"></script>
+</body>
+</html>

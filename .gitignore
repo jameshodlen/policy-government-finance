@@ -3,6 +3,8 @@
 *.xlsx
 *.json
 !package.json
+!site/data/**/*.json
+!netlify.toml
 *.parquet
 *.db
 *.sqlite

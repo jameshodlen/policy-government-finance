@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50-State Government Finance Platform</title>
+  <meta name="description" content="Comprehensive 50-state fiscal data: revenue, expenditure, debt, pensions, reserves, and economic context. Primary-sourced, nonpartisan analysis.">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <nav class="site-nav"></nav>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>50-State Government Finance Platform</h1>
+      <p class="tagline">Follow the money. Revenue, expenditure, debt, pensions, reserves, and economic context for all 50 states &mdash; primary-sourced data with nonpartisan analysis.</p>
+      <p class="methodology-note">Separating facts from interpretation. Presenting competing analytical frameworks side by side. Always linking back to the original source.</p>
+    </section>
+
+    <!-- Summary Stats -->
+    <section class="section">
+      <div class="summary-stats" id="summary-stats"></div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Fiscal Dashboard</h2>
+        <div id="map-freshness"></div>
+      </div>
+      <div class="metric-selector" id="metric-selector"></div>
+      <div class="map-container chart-container" id="choropleth-map"></div>
+    </section>
+
+    <!-- Table Section -->
+    <section class="section">
+      <div class="section-header">
+        <h2>All 50 States</h2>
+      </div>
+      <div id="states-table"></div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Analysis</h2>
+      </div>
+      <div class="analysis-cards">
+        <a href="/analysis/pensions.html" class="analysis-card" style="text-decoration:none; color:inherit;">
+          <div class="card-tag">Pensions</div>
+          <h3>The $1.3 Trillion Pension Problem</h3>
+          <p>National funded ratio ~77.4%. Illinois at 40.1%, Wisconsin at 102.5%. How unfunded liabilities crowd out current services &mdash; and what states that improved did differently.</p>
+        </a>
+        <div class="analysis-card">
+          <div class="card-tag">Coming Soon</div>
+          <h3>Post-Pandemic Fiscal Inflection</h3>
+          <p>State tax revenue 3.2% below 15-year inflation-adjusted trend. Structural deficits emerging as pandemic surpluses evaporate.</p>
+        </div>
+        <div class="analysis-card">
+          <div class="card-tag">Coming Soon</div>
+          <h3>Medicaid: The Budget Category That Swallows Everything</h3>
+          <p>Largest state spending category. 40+ states expanded. HR 1 work requirements effective Jan 2027. 3.7M people at risk.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology Note -->
+    <section class="section">
+      <div class="card" style="border-left: 3px solid var(--color-accent);">
+        <h3>Our Approach: Radical Transparency</h3>
+        <p>This platform separates facts from interpretation. Every data point links to its primary source. Where analysts disagree, we present competing frameworks side by side:</p>
+        <div class="lenses-container">
+          <div class="lens-card equity">
+            <div class="lens-label">Equity &amp; Adequacy Lens</div>
+            <p>Are public services adequately funded? Who bears the tax burden? (CBPP, State Priorities Partnership)</p>
+          </div>
+          <div class="lens-card efficiency">
+            <div class="lens-label">Efficiency &amp; Growth Lens</div>
+            <p>Are taxes competitive? Is spending sustainable? What drives economic growth? (Tax Foundation, State Policy Network)</p>
+          </div>
+          <div class="lens-card process">
+            <div class="lens-label">Process &amp; Governance Lens</div>
+            <p>Are budgeting practices sound? Is fiscal information transparent? (Pew, Volcker Alliance)</p>
+          </div>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted);">
+          <a href="/methodology/">Read our full methodology</a> &mdash; including how we handle fiscal year differences, GASB standard transitions, and data limitations.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
