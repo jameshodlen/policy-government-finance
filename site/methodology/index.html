@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Methodology — State Finance Platform</title>
+  <meta name="description" content="How we analyze state government finances: data sources, normalization, competing analytical frameworks, and known limitations.">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav class="site-nav"></nav>
+
+  <main class="container" style="max-width:800px;">
+    <div class="page-header">
+      <h1>Methodology</h1>
+      <p class="subtitle">How we analyze state government finances &mdash; and what the data can and can't tell us.</p>
+    </div>
+
+    <!-- Core Approach -->
+    <section class="section">
+      <h2>Core Approach: Follow the Money</h2>
+      <p>This platform traces financial flows through public systems using primary-sourced, publicly available data. Every data point links to its original source. Every calculated metric has a documented methodology. Every analytical claim is falsifiable.</p>
+      <p>Our core commitment: <strong>separate facts from interpretation</strong>. The same fiscal data can support different policy conclusions depending on the analytical framework applied. We present the data, then show how major analytical traditions interpret it.</p>
+    </section>
+
+    <!-- Data Sources -->
+    <section class="section">
+      <h2>Data Sources</h2>
+      <p>We use a tiered data architecture:</p>
+      <ul>
+        <li><strong>Tier 1: Automated APIs (6 sources)</strong> &mdash; Census Bureau, USASpending.gov, Bureau of Economic Analysis, FRED, CMS/Medicaid.gov, Treasury Fiscal Data. These update quarterly or better and feed our dashboards programmatically.</li>
+        <li><strong>Tier 2: Structured Downloads (9 sources)</strong> &mdash; IRS SOI, OMB Tables, NASBO, Public Plans Database, Pew Fiscal 50, Volcker Alliance, Reason Foundation, Truth in Accounting, credit rating agencies. Annual or semi-annual updates requiring manual processing.</li>
+        <li><strong>Tier 3: Manual Collection</strong> &mdash; State ACFRs (Annual Comprehensive Financial Reports), state budget documents, transparency portals. The hardest to systematize but often the most granular.</li>
+      </ul>
+      <p><a href="/methodology/data-sources.html">View the complete data source directory &rarr;</a></p>
+    </section>
+
+    <!-- Competing Frameworks -->
+    <section class="section">
+      <h2>Competing Analytical Frameworks</h2>
+      <p>No fiscal analysis is truly neutral. Different organizations bring different priors, values, and analytical emphases. We map these explicitly rather than pretending they don't exist.</p>
+
+      <div class="lenses-container">
+        <div class="lens-card equity">
+          <div class="lens-label">Equity &amp; Adequacy</div>
+          <p><strong>Organizations:</strong> Center on Budget and Policy Priorities (CBPP), State Priorities Partnership (40+ state affiliates), Institute on Taxation and Economic Policy (ITEP)</p>
+          <p><strong>Core question:</strong> Are public services adequately funded, and who bears the tax burden?</p>
+          <p><strong>Typical emphasis:</strong> Revenue adequacy, distributional analysis, program impact on low-income populations, racial equity in fiscal outcomes.</p>
+        </div>
+        <div class="lens-card efficiency">
+          <div class="lens-label">Efficiency &amp; Growth</div>
+          <p><strong>Organizations:</strong> Tax Foundation, State Policy Network (62 affiliates), Reason Foundation, Mercatus Center, American Legislative Exchange Council (ALEC)</p>
+          <p><strong>Core question:</strong> Is the tax burden competitive, and is spending efficient?</p>
+          <p><strong>Typical emphasis:</strong> Tax burden rankings, regulatory impact, pension reform, government efficiency, economic freedom indices.</p>
+        </div>
+        <div class="lens-card process">
+          <div class="lens-label">Process &amp; Governance</div>
+          <p><strong>Organizations:</strong> Pew Charitable Trusts (Fiscal 50), Volcker Alliance, Government Finance Officers Association (GFOA)</p>
+          <p><strong>Core question:</strong> Are budgeting and financial management practices sound?</p>
+          <p><strong>Typical emphasis:</strong> Budget transparency, reserve adequacy, actuarial soundness, GASB compliance, long-term fiscal sustainability.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:1rem;"><strong>Academic centers</strong> that inform our analysis: Boston College Center for Retirement Research (pensions), Rockefeller Institute of Government (revenue monitoring), Lincoln Institute of Land Policy (property tax), Andrew Young School at Georgia State (public finance).</p>
+    </section>
+
+    <!-- Normalization -->
+    <section class="section">
+      <h2>Data Normalization</h2>
+
+      <h3>Fiscal Year Calendars</h3>
+      <p>Cross-state fiscal comparisons face a fundamental temporal misalignment:</p>
+      <ul>
+        <li><strong>46 states:</strong> July 1 &ndash; June 30</li>
+        <li><strong>New York:</strong> April 1 &ndash; March 31</li>
+        <li><strong>Texas:</strong> September 1 &ndash; August 31</li>
+        <li><strong>Alabama &amp; Michigan:</strong> October 1 &ndash; September 30</li>
+      </ul>
+      <p>This means "FY2024" data for different states covers different calendar periods. We note the fiscal year calendar on every state profile and comparison.</p>
+
+      <h3>Budget Cycles</h3>
+      <p>20 states budget biennially (two-year cycles); 30 budget annually. Biennial states include: CT, HI, IN, KY, ME, MN, MT, NE, NH, NC, ND, OH, OR, TX, VA, WA, WI, WV, WY. Comparisons of year-over-year changes must account for this.</p>
+
+      <h3>State-Only vs. State + Local</h3>
+      <p>Census data covers state and local combined. NASBO covers state only. Comparisons must specify which level of government is included. States with strong county governments (e.g., Maryland) look different depending on which lens is used.</p>
+
+      <h3>Per-Capita and Economic Denominators</h3>
+      <p>Raw dollar figures are normalized using:</p>
+      <ul>
+        <li>Population (Census Bureau estimates)</li>
+        <li>State GDP (Bureau of Economic Analysis)</li>
+        <li>State personal income (BEA)</li>
+        <li>Regional price parities (BEA) for cost-of-living adjustments</li>
+      </ul>
+    </section>
+
+    <!-- GASB -->
+    <section class="section">
+      <h2>GASB Standards</h2>
+      <p>Governmental Accounting Standards Board (GASB) standards govern how state and local governments report financial information. Key standards affecting this platform's data:</p>
+      <ul>
+        <li><strong>GASB 34 (1999):</strong> Established government-wide financial statements, making state finances more comparable to private-sector reporting.</li>
+        <li><strong>GASB 67/68 (2014-2015):</strong> Changed how pension liabilities are measured and reported. <strong>Critical:</strong> Pre- and post-GASB 67/68 pension data are not directly comparable. We flag this discontinuity throughout the platform.</li>
+        <li><strong>GASB 75 (2018):</strong> Similar changes for OPEB (Other Post-Employment Benefits, primarily retiree healthcare). Many states have significant OPEB obligations that are even less well-funded than pensions.</li>
+        <li><strong>GASB 87 (2022):</strong> Lease accounting changes affecting reported obligations.</li>
+      </ul>
+      <p>The GASB Voluntary Digital Financial Reporting Initiative is developing XBRL taxonomies for government financial reporting. Florida is the first state requiring XBRL-based local government reporting (effective FY2023). The Financial Data Transparency Act (FDTA) will eventually require machine-readable government financial data, but rulemaking is expected in 2026+ with a multi-year implementation ramp.</p>
+    </section>
+
+    <!-- Limitations -->
+    <section class="section">
+      <h2>Known Limitations</h2>
+      <ul>
+        <li><strong>Timeliness:</strong> Census data lags 18-24 months. No free platform provides current-year 50-state fiscal data in standardized format. We use FRED quarterly mirrors and NASBO semi-annual surveys for more current data where available, and clearly label data vintage on every page.</li>
+        <li><strong>ACFR accessibility:</strong> Most state ACFRs are published as PDFs, not machine-readable data. Until XBRL adoption expands, comprehensive ACFR data requires manual extraction.</li>
+        <li><strong>Tax expenditures:</strong> Exemptions, credits, and abatements worth tens of billions annually are inconsistently reported across states, creating a "hidden budget" that's difficult to compare.</li>
+        <li><strong>Correlation ≠ causation:</strong> Our spending-to-outcomes analysis shows correlations, not causal relationships. Demographics, geography, historical investment levels, and cost of living create enormous confounders.</li>
+        <li><strong>Pension assumptions:</strong> Funded ratios depend on investment return assumptions (6.0% to 7.5% across plans). Higher assumptions produce higher funded ratios. We report plan-stated assumptions by default but note where market-based alternatives would change the picture.</li>
+        <li><strong>Medicaid data complexity:</strong> State vs. federal share, expansion vs. traditional populations, managed care vs. fee-for-service create layers of complexity that simple comparisons can obscure.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="card" style="border-left:3px solid var(--color-accent);">
+        <h3>The Test</h3>
+        <p>Can a fiscal conservative in Texas worried about pension sustainability AND a progressive in California worried about service adequacy both use this platform productively? If yes, the framing is right.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

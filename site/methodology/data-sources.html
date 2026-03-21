@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Sources — State Finance Platform</title>
+  <meta name="description" content="Complete directory of data sources powering the 50-State Government Finance Platform, with API status, update frequency, and lag times.">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav class="site-nav"></nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Data Sources</h1>
+      <p class="subtitle">Every data source, its update frequency, access method, and current status.</p>
+    </div>
+
+    <!-- Pipeline Status -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Pipeline Status</h2>
+        <div id="manifest-freshness"></div>
+      </div>
+      <div id="pipeline-status"></div>
+    </section>
+
+    <!-- Tier 1 -->
+    <section class="section">
+      <h2>Tier 1: Automated API Sources</h2>
+      <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+        Six federal sources with programmatic APIs form the automated pipeline backbone. These update quarterly or better.
+      </p>
+      <table class="data-table" id="tier1-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Data</th>
+            <th>Auth</th>
+            <th>Frequency</th>
+            <th>Lag</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Census Bureau</strong><br><span style="font-size:0.8rem;color:var(--color-text-muted);">api.census.gov</span></td>
+            <td>Revenue, expenditure, debt &mdash; all 50 states + DC. Full fiscal picture since 1957.</td>
+            <td>API key (free)</td>
+            <td>Annual + Quarterly</td>
+            <td>18-24 months</td>
+            <td><span id="status-census" class="freshness-badge"><span class="freshness-dot sample"></span> Pending</span></td>
+          </tr>
+          <tr>
+            <td><strong>USASpending.gov</strong><br><span style="font-size:0.8rem;color:var(--color-text-muted);">api.usaspending.gov</span></td>
+            <td>Federal spending to states: grants, contracts, loans, direct payments.</td>
+            <td>None</td>
+            <td>Quarterly+</td>
+            <td>Near real-time</td>
+            <td><span id="status-usaspending" class="freshness-badge"><span class="freshness-dot sample"></span> Pending</span></td>
+          </tr>
+          <tr>
+            <td><strong>Bureau of Economic Analysis</strong><br><span style="font-size:0.8rem;color:var(--color-text-muted);">apps.bea.gov/api</span></td>
+            <td>State GDP, personal income, per capita income, regional price parities.</td>
+            <td>API key (free)</td>
+            <td>Quarterly</td>
+            <td>~3 months</td>
+            <td><span id="status-bea" class="freshness-badge"><span class="freshness-dot sample"></span> Pending</span></td>
+          </tr>
+          <tr>
+            <td><strong>FRED</strong><br><span style="font-size:0.8rem;color:var(--color-text-muted);">api.stlouisfed.org</span></td>
+            <td>812,000+ economic time series. Mirrors Census quarterly tax data + BEA.</td>
+            <td>API key (free)</td>
+            <td>Varies</td>
+            <td>Mirrors sources</td>
+            <td><span id="status-fred" class="freshness-badge"><span class="freshness-dot sample"></span> Pending</span></td>
+          </tr>
+          <tr>
+            <td><strong>Medicaid.gov / CMS</strong><br><span style="font-size:0.8rem;color:var(--color-text-muted);">data.medicaid.gov</span></td>
+            <td>CMS-64 quarterly Medicaid expenditure, FMAP rates (50%-83%).</td>
+            <td>None</td>
+            <td>Quarterly</td>
+            <td>~6 months</td>
+            <td><span id="status-medicaid" class="freshness-badge"><span class="freshness-dot sample"></span> Pending</span></td>
+          </tr>
+          <tr>
+            <td><strong>Treasury Fiscal Data</strong><br><span style="font-size:0.8rem;color:var(--color-text-muted);">fiscaldata.treasury.gov</span></td>
+            <td>Monthly Treasury Statements, debt composition, grants to states.</td>
+            <td>None</td>
+            <td>Daily/Monthly</td>
+            <td>Days</td>
+            <td><span id="status-treasury" class="freshness-badge"><span class="freshness-dot sample"></span> Pending</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Tier 2 -->
+    <section class="section">
+      <h2>Tier 2: Structured File Downloads</h2>
+      <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+        Nine sources requiring manual download and processing. Annual or semi-annual updates.
+      </p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Data</th>
+            <th>Frequency</th>
+            <th>Lag</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>IRS Statistics of Income</strong></td>
+            <td>State-level income data + county-to-county migration (1990+)</td>
+            <td>Annual</td>
+            <td>~2 years</td>
+          </tr>
+          <tr>
+            <td><strong>OMB Analytical Perspectives Ch. 8</strong></td>
+            <td>State-by-state federal grant program spending</td>
+            <td>Annual</td>
+            <td>Budget release</td>
+          </tr>
+          <tr>
+            <td><strong>NASBO</strong></td>
+            <td>State expenditure by function and fund source; fiscal survey</td>
+            <td>Annual/Semi-annual</td>
+            <td>Varies</td>
+          </tr>
+          <tr>
+            <td><strong>Public Plans Database</strong><br><span style="font-size:0.8rem;color:var(--color-text-muted);">Boston College CRR</span></td>
+            <td>230+ pension plans, 100+ variables, 2001-2024</td>
+            <td>Annual</td>
+            <td>~1 year</td>
+          </tr>
+          <tr>
+            <td><strong>Pew Fiscal 50</strong></td>
+            <td>Rainy day fund balances, revenue volatility index</td>
+            <td>Varies</td>
+            <td>Varies</td>
+          </tr>
+          <tr>
+            <td><strong>Volcker Alliance</strong></td>
+            <td>50-state budget practice grades (5 categories)</td>
+            <td>Periodic</td>
+            <td>Varies</td>
+          </tr>
+          <tr>
+            <td><strong>Reason Foundation</strong></td>
+            <td>Pension risk analysis and solvency projections</td>
+            <td>Annual</td>
+            <td>~1 year</td>
+          </tr>
+          <tr>
+            <td><strong>Truth in Accounting</strong><br><span style="font-size:0.8rem;color:var(--color-text-muted);">data-z.org</span></td>
+            <td>ACFR directory, financial condition rankings, timeliness tracking</td>
+            <td>Annual</td>
+            <td>Varies</td>
+          </tr>
+          <tr>
+            <td><strong>Credit Rating Agencies</strong><br><span style="font-size:0.8rem;color:var(--color-text-muted);">S&P / Moody's / Fitch / KBRA</span></td>
+            <td>State credit ratings (no public API; historical via S&P report)</td>
+            <td>Ongoing</td>
+            <td>Days</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Tier 3 -->
+    <section class="section">
+      <h2>Tier 3: Manual Collection</h2>
+      <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+        The hardest data to systematize. Requires human curation or specialized extraction.
+      </p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Challenge</th>
+            <th>Approach</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>State ACFRs</strong></td>
+            <td>PDF-dominant; 50+ reports; format varies; delays common (Illinois: 774-day delay on FY2023)</td>
+            <td>Manual extraction for WI/MN first; tracking GASB XBRL initiative and FDTA timeline</td>
+          </tr>
+          <tr>
+            <td><strong>State Budget Documents</strong></td>
+            <td>Three types per state (proposed, enacted, actuals); format varies enormously</td>
+            <td>NASBO directory; Volcker Alliance Budget Sources Guide</td>
+          </tr>
+          <tr>
+            <td><strong>State Transparency Portals</strong></td>
+            <td>Quality varies (Ohio #1 nationally to minimal portals); 32+ states mandate checkbook transparency</td>
+            <td>Prioritize states on Socrata/Tyler (SODA API available); WI and MN first</td>
+          </tr>
+          <tr>
+            <td><strong>EMMA (Municipal Bonds)</strong></td>
+            <td>No public REST API; systematic access requires paid subscription</td>
+            <td>Manual lookups; document as platform limitation</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Data Freshness Explanation -->
+    <section class="section">
+      <div class="card" style="border-left:3px solid var(--color-accent);">
+        <h3>Data Freshness Indicators</h3>
+        <p>Every page displays data freshness badges showing when data was last updated:</p>
+        <div style="display:flex;gap:1.5rem;flex-wrap:wrap;margin:1rem 0;">
+          <span class="freshness-badge"><span class="freshness-dot fresh"></span> Current — Updated within 90 days</span>
+          <span class="freshness-badge"><span class="freshness-dot aging"></span> Aging — 90 days to 1 year old</span>
+          <span class="freshness-badge"><span class="freshness-dot stale"></span> Stale — Over 1 year old</span>
+          <span class="freshness-badge"><span class="freshness-dot sample"></span> Sample — Development data, not from live sources</span>
+        </div>
+        <p style="font-size:0.85rem;color:var(--color-text-muted);">The platform's biggest timeliness constraint is the Census Bureau's 18-24 month lag on comprehensive state finance data. We use FRED quarterly mirrors and NASBO semi-annual surveys to provide more current context where available.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // Load and display pipeline status from manifest
+    document.addEventListener('DOMContentLoaded', function() {
+      SFP.loadJSON('/data/manifest.json')
+        .then(function(manifest) {
+          SFP.renderFreshness('#manifest-freshness', 'Pipeline',
+            manifest.last_run, manifest.sample);
+
+          var container = document.getElementById('pipeline-status');
+          if (!container || !manifest.sources) return;
+
+          var html = '<div class="summary-stats">';
+          var sourceCount = Object.keys(manifest.sources).length;
+          var sampleCount = Object.values(manifest.sources)
+            .filter(function(s) { return s.status === 'sample'; }).length;
+
+          html += '<div class="summary-stat">' +
+            '<div class="stat-value">' + sourceCount + '</div>' +
+            '<div class="stat-label">Data Sources Configured</div></div>';
+          html += '<div class="summary-stat">' +
+            '<div class="stat-value">' + sampleCount + '</div>' +
+            '<div class="stat-label">Using Sample Data</div></div>';
+          html += '<div class="summary-stat">' +
+            '<div class="stat-value">' + (sourceCount - sampleCount) + '</div>' +
+            '<div class="stat-label">Live API Connected</div></div>';
+          html += '</div>';
+          container.innerHTML = html;
+        })
+        .catch(function() {});
+    });
+  </script>
+</body>
+</html>

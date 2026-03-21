@@ -1,0 +1,509 @@
+{
+  "lastUpdated": "2024-06-30",
+  "source": "Public Plans Database (Boston College CRR)",
+  "sample": true,
+  "nationalFundedRatio": 77.4,
+  "totalUnfundedLiability": 516178954685,
+  "states": [
+    {
+      "abbrev": "WI",
+      "name": "Wisconsin",
+      "fundedRatio": 102.5,
+      "unfundedLiability": -998983372,
+      "annualContribution": -58760235,
+      "contributionAsPercentRevenue": -0.1,
+      "unfundedAsPercentRevenue": -2.1,
+      "highlight": true
+    },
+    {
+      "abbrev": "SD",
+      "name": "South Dakota",
+      "fundedRatio": 100.1,
+      "unfundedLiability": -5375038,
+      "annualContribution": -316753,
+      "contributionAsPercentRevenue": -0.0,
+      "unfundedAsPercentRevenue": -0.1,
+      "highlight": false
+    },
+    {
+      "abbrev": "NE",
+      "name": "Nebraska",
+      "fundedRatio": 93.2,
+      "unfundedLiability": 1004430813,
+      "annualContribution": 72159304,
+      "contributionAsPercentRevenue": 0.5,
+      "unfundedAsPercentRevenue": 6.5,
+      "highlight": false
+    },
+    {
+      "abbrev": "TN",
+      "name": "Tennessee",
+      "fundedRatio": 92.8,
+      "unfundedLiability": 1993088774,
+      "annualContribution": 96974503,
+      "contributionAsPercentRevenue": 0.1,
+      "unfundedAsPercentRevenue": 2.9,
+      "highlight": false
+    },
+    {
+      "abbrev": "NY",
+      "name": "New York",
+      "fundedRatio": 90.4,
+      "unfundedLiability": 13758881360,
+      "annualContribution": 971704252,
+      "contributionAsPercentRevenue": 0.7,
+      "unfundedAsPercentRevenue": 9.3,
+      "highlight": false
+    },
+    {
+      "abbrev": "WA",
+      "name": "Washington",
+      "fundedRatio": 88.7,
+      "unfundedLiability": 5034894526,
+      "annualContribution": 331826682,
+      "contributionAsPercentRevenue": 0.4,
+      "unfundedAsPercentRevenue": 6.7,
+      "highlight": false
+    },
+    {
+      "abbrev": "NC",
+      "name": "North Carolina",
+      "fundedRatio": 87.3,
+      "unfundedLiability": 4273498924,
+      "annualContribution": 228397927,
+      "contributionAsPercentRevenue": 0.3,
+      "unfundedAsPercentRevenue": 4.9,
+      "highlight": false
+    },
+    {
+      "abbrev": "IA",
+      "name": "Iowa",
+      "fundedRatio": 86.9,
+      "unfundedLiability": 2394427929,
+      "annualContribution": 167416060,
+      "contributionAsPercentRevenue": 0.5,
+      "unfundedAsPercentRevenue": 7.5,
+      "highlight": false
+    },
+    {
+      "abbrev": "DE",
+      "name": "Delaware",
+      "fundedRatio": 86.5,
+      "unfundedLiability": 851675317,
+      "annualContribution": 54812809,
+      "contributionAsPercentRevenue": 0.8,
+      "unfundedAsPercentRevenue": 11.9,
+      "highlight": false
+    },
+    {
+      "abbrev": "ID",
+      "name": "Idaho",
+      "fundedRatio": 85.8,
+      "unfundedLiability": 959474012,
+      "annualContribution": 54922257,
+      "contributionAsPercentRevenue": 0.4,
+      "unfundedAsPercentRevenue": 7.3,
+      "highlight": false
+    },
+    {
+      "abbrev": "UT",
+      "name": "Utah",
+      "fundedRatio": 85.2,
+      "unfundedLiability": 2503561873,
+      "annualContribution": 107561247,
+      "contributionAsPercentRevenue": 0.3,
+      "unfundedAsPercentRevenue": 7.1,
+      "highlight": false
+    },
+    {
+      "abbrev": "OR",
+      "name": "Oregon",
+      "fundedRatio": 84.1,
+      "unfundedLiability": 4626508051,
+      "annualContribution": 342415863,
+      "contributionAsPercentRevenue": 1.2,
+      "unfundedAsPercentRevenue": 15.6,
+      "highlight": false
+    },
+    {
+      "abbrev": "MN",
+      "name": "Minnesota",
+      "fundedRatio": 83.6,
+      "unfundedLiability": 3718264527,
+      "annualContribution": 197553172,
+      "contributionAsPercentRevenue": 0.3,
+      "unfundedAsPercentRevenue": 6.5,
+      "highlight": true
+    },
+    {
+      "abbrev": "GA",
+      "name": "Georgia",
+      "fundedRatio": 82.4,
+      "unfundedLiability": 10941037311,
+      "annualContribution": 757089615,
+      "contributionAsPercentRevenue": 0.8,
+      "unfundedAsPercentRevenue": 11.5,
+      "highlight": false
+    },
+    {
+      "abbrev": "FL",
+      "name": "Florida",
+      "fundedRatio": 81.3,
+      "unfundedLiability": 13684125999,
+      "annualContribution": 1027956799,
+      "contributionAsPercentRevenue": 0.5,
+      "unfundedAsPercentRevenue": 6.9,
+      "highlight": false
+    },
+    {
+      "abbrev": "OH",
+      "name": "Ohio",
+      "fundedRatio": 80.7,
+      "unfundedLiability": 15669530888,
+      "annualContribution": 1035288824,
+      "contributionAsPercentRevenue": 0.9,
+      "unfundedAsPercentRevenue": 13.4,
+      "highlight": false
+    },
+    {
+      "abbrev": "ME",
+      "name": "Maine",
+      "fundedRatio": 79.8,
+      "unfundedLiability": 1726937606,
+      "annualContribution": 87312853,
+      "contributionAsPercentRevenue": 0.8,
+      "unfundedAsPercentRevenue": 15.9,
+      "highlight": false
+    },
+    {
+      "abbrev": "VA",
+      "name": "Virginia",
+      "fundedRatio": 79.2,
+      "unfundedLiability": 9441890487,
+      "annualContribution": 601943630,
+      "contributionAsPercentRevenue": 0.7,
+      "unfundedAsPercentRevenue": 11.8,
+      "highlight": false
+    },
+    {
+      "abbrev": "TX",
+      "name": "Texas",
+      "fundedRatio": 78.5,
+      "unfundedLiability": 50821058206,
+      "annualContribution": 3157733859,
+      "contributionAsPercentRevenue": 1.0,
+      "unfundedAsPercentRevenue": 15.5,
+      "highlight": false
+    },
+    {
+      "abbrev": "AR",
+      "name": "Arkansas",
+      "fundedRatio": 77.9,
+      "unfundedLiability": 4069244412,
+      "annualContribution": 190625976,
+      "contributionAsPercentRevenue": 0.9,
+      "unfundedAsPercentRevenue": 19.5,
+      "highlight": false
+    },
+    {
+      "abbrev": "IN",
+      "name": "Indiana",
+      "fundedRatio": 77.4,
+      "unfundedLiability": 5085542465,
+      "annualContribution": 280513054,
+      "contributionAsPercentRevenue": 0.5,
+      "unfundedAsPercentRevenue": 8.3,
+      "highlight": false
+    },
+    {
+      "abbrev": "MO",
+      "name": "Missouri",
+      "fundedRatio": 76.8,
+      "unfundedLiability": 9105870385,
+      "annualContribution": 496896956,
+      "contributionAsPercentRevenue": 0.9,
+      "unfundedAsPercentRevenue": 16.0,
+      "highlight": false
+    },
+    {
+      "abbrev": "MD",
+      "name": "Maryland",
+      "fundedRatio": 76.1,
+      "unfundedLiability": 4491295660,
+      "annualContribution": 193169523,
+      "contributionAsPercentRevenue": 0.3,
+      "unfundedAsPercentRevenue": 7.1,
+      "highlight": false
+    },
+    {
+      "abbrev": "MI",
+      "name": "Michigan",
+      "fundedRatio": 75.3,
+      "unfundedLiability": 17382131090,
+      "annualContribution": 1296056212,
+      "contributionAsPercentRevenue": 1.4,
+      "unfundedAsPercentRevenue": 18.6,
+      "highlight": false
+    },
+    {
+      "abbrev": "WV",
+      "name": "West Virginia",
+      "fundedRatio": 74.8,
+      "unfundedLiability": 2446488004,
+      "annualContribution": 105731521,
+      "contributionAsPercentRevenue": 0.9,
+      "unfundedAsPercentRevenue": 20.2,
+      "highlight": false
+    },
+    {
+      "abbrev": "AZ",
+      "name": "Arizona",
+      "fundedRatio": 74.2,
+      "unfundedLiability": 12384775475,
+      "annualContribution": 518092007,
+      "contributionAsPercentRevenue": 0.8,
+      "unfundedAsPercentRevenue": 18.3,
+      "highlight": false
+    },
+    {
+      "abbrev": "OK",
+      "name": "Oklahoma",
+      "fundedRatio": 73.6,
+      "unfundedLiability": 7152276827,
+      "annualContribution": 318857905,
+      "contributionAsPercentRevenue": 1.1,
+      "unfundedAsPercentRevenue": 24.1,
+      "highlight": false
+    },
+    {
+      "abbrev": "VT",
+      "name": "Vermont",
+      "fundedRatio": 72.9,
+      "unfundedLiability": 914228288,
+      "annualContribution": 68024679,
+      "contributionAsPercentRevenue": 1.5,
+      "unfundedAsPercentRevenue": 19.7,
+      "highlight": false
+    },
+    {
+      "abbrev": "KS",
+      "name": "Kansas",
+      "fundedRatio": 72.3,
+      "unfundedLiability": 3442364051,
+      "annualContribution": 219556617,
+      "contributionAsPercentRevenue": 0.9,
+      "unfundedAsPercentRevenue": 13.4,
+      "highlight": false
+    },
+    {
+      "abbrev": "MT",
+      "name": "Montana",
+      "fundedRatio": 71.8,
+      "unfundedLiability": 2438769183,
+      "annualContribution": 163623653,
+      "contributionAsPercentRevenue": 1.8,
+      "unfundedAsPercentRevenue": 27.2,
+      "highlight": false
+    },
+    {
+      "abbrev": "NM",
+      "name": "New Mexico",
+      "fundedRatio": 71.2,
+      "unfundedLiability": 2652816803,
+      "annualContribution": 140037909,
+      "contributionAsPercentRevenue": 0.7,
+      "unfundedAsPercentRevenue": 12.7,
+      "highlight": false
+    },
+    {
+      "abbrev": "AL",
+      "name": "Alabama",
+      "fundedRatio": 70.5,
+      "unfundedLiability": 8273127378,
+      "annualContribution": 339706513,
+      "contributionAsPercentRevenue": 0.7,
+      "unfundedAsPercentRevenue": 17.4,
+      "highlight": false
+    },
+    {
+      "abbrev": "CA",
+      "name": "California",
+      "fundedRatio": 69.8,
+      "unfundedLiability": 90930313883,
+      "annualContribution": 6824747889,
+      "contributionAsPercentRevenue": 2.1,
+      "unfundedAsPercentRevenue": 28.4,
+      "highlight": false
+    },
+    {
+      "abbrev": "ND",
+      "name": "North Dakota",
+      "fundedRatio": 69.3,
+      "unfundedLiability": 777848132,
+      "annualContribution": 42909335,
+      "contributionAsPercentRevenue": 0.8,
+      "unfundedAsPercentRevenue": 13.8,
+      "highlight": false
+    },
+    {
+      "abbrev": "NH",
+      "name": "New Hampshire",
+      "fundedRatio": 68.7,
+      "unfundedLiability": 2238444148,
+      "annualContribution": 105286266,
+      "contributionAsPercentRevenue": 0.8,
+      "unfundedAsPercentRevenue": 17.2,
+      "highlight": false
+    },
+    {
+      "abbrev": "RI",
+      "name": "Rhode Island",
+      "fundedRatio": 68.1,
+      "unfundedLiability": 1197887360,
+      "annualContribution": 90159288,
+      "contributionAsPercentRevenue": 0.8,
+      "unfundedAsPercentRevenue": 11.2,
+      "highlight": false
+    },
+    {
+      "abbrev": "MA",
+      "name": "Massachusetts",
+      "fundedRatio": 67.4,
+      "unfundedLiability": 7998225474,
+      "annualContribution": 569510843,
+      "contributionAsPercentRevenue": 0.9,
+      "unfundedAsPercentRevenue": 12.8,
+      "highlight": false
+    },
+    {
+      "abbrev": "PA",
+      "name": "Pennsylvania",
+      "fundedRatio": 66.8,
+      "unfundedLiability": 26606513003,
+      "annualContribution": 1946220994,
+      "contributionAsPercentRevenue": 1.4,
+      "unfundedAsPercentRevenue": 18.8,
+      "highlight": false
+    },
+    {
+      "abbrev": "WY",
+      "name": "Wyoming",
+      "fundedRatio": 66.2,
+      "unfundedLiability": 1261174250,
+      "annualContribution": 64986684,
+      "contributionAsPercentRevenue": 1.5,
+      "unfundedAsPercentRevenue": 29.9,
+      "highlight": false
+    },
+    {
+      "abbrev": "CO",
+      "name": "Colorado",
+      "fundedRatio": 65.5,
+      "unfundedLiability": 16093389922,
+      "annualContribution": 971735810,
+      "contributionAsPercentRevenue": 2.0,
+      "unfundedAsPercentRevenue": 33.3,
+      "highlight": false
+    },
+    {
+      "abbrev": "NV",
+      "name": "Nevada",
+      "fundedRatio": 64.9,
+      "unfundedLiability": 5996024490,
+      "annualContribution": 443642901,
+      "contributionAsPercentRevenue": 1.6,
+      "unfundedAsPercentRevenue": 21.4,
+      "highlight": false
+    },
+    {
+      "abbrev": "LA",
+      "name": "Louisiana",
+      "fundedRatio": 64.3,
+      "unfundedLiability": 13005121379,
+      "annualContribution": 860406511,
+      "contributionAsPercentRevenue": 2.7,
+      "unfundedAsPercentRevenue": 41.5,
+      "highlight": false
+    },
+    {
+      "abbrev": "HI",
+      "name": "Hawaii",
+      "fundedRatio": 63.2,
+      "unfundedLiability": 3262374381,
+      "annualContribution": 160370728,
+      "contributionAsPercentRevenue": 1.0,
+      "unfundedAsPercentRevenue": 20.6,
+      "highlight": false
+    },
+    {
+      "abbrev": "MS",
+      "name": "Mississippi",
+      "fundedRatio": 62.1,
+      "unfundedLiability": 3946799629,
+      "annualContribution": 226477428,
+      "contributionAsPercentRevenue": 1.0,
+      "unfundedAsPercentRevenue": 17.3,
+      "highlight": false
+    },
+    {
+      "abbrev": "AK",
+      "name": "Alaska",
+      "fundedRatio": 61.4,
+      "unfundedLiability": 1326044784,
+      "annualContribution": 57961197,
+      "contributionAsPercentRevenue": 0.9,
+      "unfundedAsPercentRevenue": 20.2,
+      "highlight": false
+    },
+    {
+      "abbrev": "SC",
+      "name": "South Carolina",
+      "fundedRatio": 60.8,
+      "unfundedLiability": 6317481844,
+      "annualContribution": 492273999,
+      "contributionAsPercentRevenue": 1.0,
+      "unfundedAsPercentRevenue": 12.9,
+      "highlight": false
+    },
+    {
+      "abbrev": "CT",
+      "name": "Connecticut",
+      "fundedRatio": 52.3,
+      "unfundedLiability": 11084870749,
+      "annualContribution": 681484698,
+      "contributionAsPercentRevenue": 2.7,
+      "unfundedAsPercentRevenue": 43.7,
+      "highlight": true
+    },
+    {
+      "abbrev": "KY",
+      "name": "Kentucky",
+      "fundedRatio": 49.8,
+      "unfundedLiability": 11425732174,
+      "annualContribution": 666479193,
+      "contributionAsPercentRevenue": 1.6,
+      "unfundedAsPercentRevenue": 27.7,
+      "highlight": true
+    },
+    {
+      "abbrev": "NJ",
+      "name": "New Jersey",
+      "fundedRatio": 44.7,
+      "unfundedLiability": 42437729414,
+      "annualContribution": 3107407964,
+      "contributionAsPercentRevenue": 5.0,
+      "unfundedAsPercentRevenue": 68.1,
+      "highlight": true
+    },
+    {
+      "abbrev": "IL",
+      "name": "Illinois",
+      "fundedRatio": 40.1,
+      "unfundedLiability": 48035121455,
+      "annualContribution": 3695371866,
+      "contributionAsPercentRevenue": 3.0,
+      "unfundedAsPercentRevenue": 39.0,
+      "highlight": true
+    }
+  ]
+}
