@@ -59,15 +59,18 @@ def transform(raw_data):
     """Transform raw USASpending responses into normalized records."""
     records = []
     for state_data in raw_data:
+        # USASpending /recipient/state/ returns total_amount and
+        # award_amount_by_type with keys like "grants", "contracts", etc.
+        award_types = state_data.get("award_amount_by_type", {})
         records.append({
             "abbrev": state_data.get("abbrev"),
             "fips": state_data.get("fips"),
             "name": state_data.get("name", STATE_NAMES.get(state_data.get("abbrev", ""))),
-            "totalFederalSpending": state_data.get("total", 0),
-            "grants": state_data.get("grants", 0),
-            "contracts": state_data.get("contracts", 0),
-            "loans": state_data.get("loans", 0),
-            "directPayments": state_data.get("direct_payments", 0),
+            "totalFederalSpending": state_data.get("total_amount", state_data.get("total", 0)),
+            "grants": award_types.get("grants", state_data.get("grants", 0)),
+            "contracts": award_types.get("contracts", state_data.get("contracts", 0)),
+            "loans": award_types.get("loans", state_data.get("loans", 0)),
+            "directPayments": award_types.get("direct_payments", state_data.get("direct_payments", 0)),
             "population": state_data.get("population", 0),
         })
     return records

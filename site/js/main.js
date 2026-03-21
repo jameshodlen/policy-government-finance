@@ -10,7 +10,7 @@ window.SFP = SFP;
 /* --- Navigation --- */
 SFP.NAV_ITEMS = [
   { label: 'Dashboard', href: '/' },
-  { label: 'States', href: '/states/wi.html' },
+  { label: 'States', href: '/states/index.html' },
   { label: 'Analysis', href: '/analysis/pensions.html' },
   { label: 'Methodology', href: '/methodology/' },
   { label: 'Data Sources', href: '/methodology/data-sources.html' }
