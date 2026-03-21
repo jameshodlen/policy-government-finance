@@ -10,11 +10,11 @@
   "personalIncomePerCapita": 59191,
   "totalRevenue": 62127510811,
   "revenuePerCapita": 10867,
-  "incomeTaxRevenue": 16740097061,
-  "salesTaxRevenue": 20828272853,
-  "propertyTaxRevenue": 867054167,
-  "federalTransfers": 19062510263,
-  "otherRevenue": 4629576467,
+  "incomeTaxRevenue": 17170205911,
+  "salesTaxRevenue": 21363420555,
+  "propertyTaxRevenue": 1279066145,
+  "federalTransfers": 16517306712,
+  "otherRevenue": 5797511489,
   "totalExpenditure": 63547404384,
   "expenditurePerCapita": 11115,
   "educationSpending": 17880189009,
@@ -32,7 +32,7 @@
   "pensionContributionAsPercentRevenue": 1.2,
   "reserveDays": 43,
   "revenueVolatility": 9.8,
-  "federalDependencyRatio": 30.7,
+  "federalDependencyRatio": 26.6,
   "medicaidExpanded": true,
   "medicaidWaiverCoverage": false,
   "hasIncomeTax": true,
@@ -125,27 +125,27 @@
   "revenueBreakdown": [
     {
       "category": "Income Tax",
-      "value": 16740097061,
+      "value": 17170205911,
       "color": "#2c5f8a"
     },
     {
       "category": "Sales Tax",
-      "value": 20828272853,
+      "value": 21363420555,
       "color": "#4a90b8"
     },
     {
       "category": "Federal Transfers",
-      "value": 19062510263,
+      "value": 16517306712,
       "color": "#7ab8d4"
     },
     {
       "category": "Property Tax",
-      "value": 867054167,
+      "value": 1279066145,
       "color": "#a8d4e6"
     },
     {
       "category": "Other",
-      "value": 4629576467,
+      "value": 5797511489,
       "color": "#d4ecf4"
     }
   ],

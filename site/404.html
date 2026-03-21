@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — State Finance Platform</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <nav class="site-nav"></nav>
+
+  <main class="container" style="max-width:640px;text-align:center;padding:4rem 1.5rem;">
+    <h1 style="font-size:3rem;margin-bottom:0.25em;">404</h1>
+    <h2>Page Not Found</h2>
+    <p style="color:var(--color-text-secondary);margin-bottom:2rem;">The page you're looking for doesn't exist or has been moved.</p>
+
+    <div id="state-suggestion" style="display:none;margin-bottom:2rem;">
+      <div class="card" style="border-left:3px solid var(--color-accent);text-align:left;">
+        <p style="margin:0;">Looking for a state fiscal profile? Detailed profiles are currently available for <a href="/states/wi.html">Wisconsin</a> and <a href="/states/mn.html">Minnesota</a>. Browse all 50 states on the <a href="/states/index.html">states index</a>.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:0.75rem;align-items:center;">
+      <a href="/" style="font-weight:600;">Dashboard &mdash; 50-State Overview</a>
+      <a href="/states/index.html">All 50 States</a>
+      <a href="/analysis/pensions.html">Pension Analysis</a>
+      <a href="/methodology/">Methodology</a>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // Show state-specific suggestion if URL matches /states/*.html
+    (function() {
+      var path = window.location.pathname;
+      if (path.match(/\/states\/[a-z]{2}\.html/i)) {
+        var el = document.getElementById('state-suggestion');
+        if (el) el.style.display = 'block';
+      }
+    })();
+  </script>
+</body>
+</html>
