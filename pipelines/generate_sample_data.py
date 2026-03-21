@@ -141,8 +141,8 @@ RESERVE_DAYS = {
     "AL": 19, "KY": 18, "MD": 17, "AZ": 16, "CA": 15,
     "NH": 14, "LA": 13, "DE": 12, "ME": 11, "MA": 10,
     "HI": 9, "NV": 8, "RI": 7, "MS": 6, "NY": 5,
-    "VT": 4, "CT": 3, "WV": 2, "PA": 8, "IL": 2,
-    "NM": 87, "NJ": 0,
+    "VT": 4, "CT": 3, "PA": 8, "IL": 2,
+    "NJ": 0,
 }
 
 
@@ -158,14 +158,15 @@ def generate_state_summary(abbrev, name, fips, pop, gdp):
     if abbrev in NO_INCOME_TAX:
         raw_income = 0
         raw_sales = random.uniform(0.35, 0.55)
+        raw_property = random.uniform(0.02, 0.08)
+        raw_federal = random.uniform(0.15, 0.30)
         raw_other = random.uniform(0.15, 0.30)
     else:
         raw_income = random.uniform(0.25, 0.40)
         raw_sales = random.uniform(0.20, 0.35)
+        raw_property = random.uniform(0.01, 0.05)
+        raw_federal = random.uniform(0.25, 0.40)
         raw_other = random.uniform(0.05, 0.15)
-
-    raw_property = random.uniform(0.01, 0.05)
-    raw_federal = random.uniform(0.25, 0.40)
 
     total_weight = raw_income + raw_sales + raw_property + raw_federal + raw_other
     income_tax = base_rev * (raw_income / total_weight)

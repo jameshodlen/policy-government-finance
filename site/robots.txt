@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://state-gov-finance.netlify.app/sitemap.xml
