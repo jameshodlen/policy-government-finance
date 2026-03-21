@@ -62,9 +62,9 @@ FISCAL_YEAR_EXCEPTIONS = {
     "MI": {"start_month": 10, "label": "October 1 - September 30"},
 }
 
-# Biennial budget states (20 states)
+# Biennial budget states (19 states)
 BIENNIAL_BUDGET_STATES = [
-    "CT", "HI", "IL", "IN", "KY", "ME", "MN", "MT", "NE", "NH",
+    "CT", "HI", "IN", "KY", "ME", "MN", "MT", "NE", "NH",
     "NC", "ND", "OH", "OR", "TX", "VA", "WA", "WI", "WV", "WY",
 ]
 
