@@ -6,6 +6,9 @@ API endpoints, state FIPS codes, fiscal year mappings, output paths.
 import os
 from pathlib import Path
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # --- Paths ---
 PROJECT_ROOT = Path(__file__).parent.parent
 DATA_RAW = PROJECT_ROOT / "data" / "raw"

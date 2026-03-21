@@ -54,6 +54,7 @@
   function init() {
     SFP.loadJSON('/data/pensions/overview.json')
       .then(function(data) {
+        renderHeadline(data);
         renderSummaryStats(data);
         renderScatterPlot(data.states);
         renderTable(data.states);
@@ -63,6 +64,23 @@
       .catch(function(err) {
         console.error('Failed to load pension data:', err);
       });
+  }
+
+  function renderHeadline(data) {
+    var headline = document.getElementById('pension-headline');
+    if (headline) {
+      headline.textContent = 'The ' + SFP.formatCurrency(data.totalUnfundedLiability) + ' Pension Problem';
+    }
+    var subtitle = document.getElementById('pension-subtitle');
+    if (subtitle && data.states && data.states.length > 0) {
+      var sorted = data.states.slice().sort(function(a, b) { return b.fundedRatio - a.fundedRatio; });
+      var best = sorted[0];
+      var worst = sorted[sorted.length - 1];
+      subtitle.textContent = 'National funded ratio ~' + SFP.formatPercent(data.nationalFundedRatio) +
+        '. From ' + best.name + '\'s ' + SFP.formatPercent(best.fundedRatio) +
+        ' to ' + worst.name + '\'s ' + SFP.formatPercent(worst.fundedRatio) +
+        ' \u2014 how unfunded liabilities crowd out current services.';
+    }
   }
 
   function renderSummaryStats(data) {

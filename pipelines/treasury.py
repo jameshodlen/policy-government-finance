@@ -68,15 +68,23 @@ def transform(receipts_data, outlays_data, debt_data):
     }
 
     if receipts_data and "data" in receipts_data:
-        for row in receipts_data["data"][:12]:
+        for row in receipts_data["data"]:
             records["receipts"].append({
                 "date": row.get("record_date"),
                 "category": row.get("classification_desc"),
                 "amount": row.get("current_fytd_net_rcpt_amt"),
             })
 
+    if outlays_data and "data" in outlays_data:
+        for row in outlays_data["data"]:
+            records["outlays"].append({
+                "date": row.get("record_date"),
+                "category": row.get("classification_desc"),
+                "amount": row.get("current_fytd_net_outly_amt"),
+            })
+
     if debt_data and "data" in debt_data:
-        for row in debt_data["data"][:30]:
+        for row in debt_data["data"]:
             records["debt"].append({
                 "date": row.get("record_date"),
                 "totalDebt": row.get("tot_pub_debt_out_amt"),

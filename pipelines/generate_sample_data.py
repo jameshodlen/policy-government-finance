@@ -148,11 +148,21 @@ def generate_state_summary(abbrev, name, fips, pop, gdp):
     """Generate a summary record for one state."""
     # Revenue (calibrated: US average ~$8K per capita total state revenue)
     base_rev = pop * random.uniform(6500, 11000)
-    income_tax = 0 if abbrev in NO_INCOME_TAX else base_rev * random.uniform(0.25, 0.40)
-    sales_tax = base_rev * random.uniform(0.20, 0.35)
-    property_tax = base_rev * random.uniform(0.01, 0.05)  # State-level property tax is small
-    federal_transfers = base_rev * random.uniform(0.25, 0.40)
-    other_rev = base_rev - income_tax - sales_tax - property_tax - federal_transfers
+
+    # Draw raw component weights, then normalize to sum to base_rev
+    # This prevents negative otherRevenue from percentage overflows
+    raw_income = 0 if abbrev in NO_INCOME_TAX else random.uniform(0.25, 0.40)
+    raw_sales = random.uniform(0.20, 0.35)
+    raw_property = random.uniform(0.01, 0.05)
+    raw_federal = random.uniform(0.25, 0.40)
+    raw_other = random.uniform(0.05, 0.15)
+
+    total_weight = raw_income + raw_sales + raw_property + raw_federal + raw_other
+    income_tax = base_rev * (raw_income / total_weight)
+    sales_tax = base_rev * (raw_sales / total_weight)
+    property_tax = base_rev * (raw_property / total_weight)
+    federal_transfers = base_rev * (raw_federal / total_weight)
+    other_rev = base_rev * (raw_other / total_weight)
 
     # Expenditure
     total_exp = base_rev * random.uniform(0.95, 1.05)
@@ -169,7 +179,7 @@ def generate_state_summary(abbrev, name, fips, pop, gdp):
 
     # Pension
     funded_ratio = PENSION_FUNDED.get(abbrev, 75.0)
-    unfunded_liability = (pop * random.uniform(3000, 8000)) * (1 - funded_ratio / 100)
+    unfunded_liability = (pop * random.uniform(9000, 20000)) * (1 - funded_ratio / 100)
     if funded_ratio < 50:
         unfunded_liability *= 1.5
     annual_contribution = unfunded_liability * random.uniform(0.04, 0.08)
@@ -228,6 +238,7 @@ def generate_state_summary(abbrev, name, fips, pop, gdp):
 
         # Medicaid
         "medicaidExpanded": abbrev not in NON_EXPANSION,
+        "medicaidWaiverCoverage": abbrev == "WI",
 
         # Flags
         "hasIncomeTax": abbrev not in NO_INCOME_TAX,
