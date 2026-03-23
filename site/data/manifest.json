@@ -1,41 +1,41 @@
 {
   "sample": true,
   "generated": "2026-03-23T19:33:22.610244Z",
-  "last_run": "2026-03-23T19:34:53.490907Z",
+  "last_run": "2026-03-23T20:07:58.733202Z",
   "note": "Sample data for development. Connect live API pipelines for real data.",
   "sources": {
     "census_gov_finances": {
-      "last_updated": "2026-03-23T19:34:36.120173Z",
-      "status": "no_api_key",
+      "last_updated": "2026-03-23T20:07:33.348553Z",
+      "status": "api_error",
       "record_count": 0,
       "notes": ""
     },
     "usaspending": {
-      "last_updated": "2026-03-23T19:34:52.804794Z",
+      "last_updated": "2026-03-23T20:07:50.031358Z",
       "status": "api_error",
       "record_count": 0,
       "notes": ""
     },
     "bea_regional": {
-      "last_updated": "2026-03-23T19:34:52.805733Z",
-      "status": "no_api_key",
+      "last_updated": "2026-03-23T20:07:51.039925Z",
+      "status": "api_error",
       "record_count": 0,
       "notes": ""
     },
     "fred": {
-      "last_updated": "2026-03-23T19:34:52.806778Z",
-      "status": "no_api_key",
+      "last_updated": "2026-03-23T20:07:58.052330Z",
+      "status": "api_error",
       "record_count": 0,
       "notes": ""
     },
     "medicaid_cms": {
-      "last_updated": "2026-03-23T19:34:52.815083Z",
+      "last_updated": "2026-03-23T20:07:58.059297Z",
       "status": "success",
       "record_count": 50,
       "notes": ""
     },
     "treasury_fiscal": {
-      "last_updated": "2026-03-23T19:34:53.490896Z",
+      "last_updated": "2026-03-23T20:07:58.733194Z",
       "status": "success",
       "record_count": 0,
       "notes": ""

@@ -105,7 +105,7 @@ def output(records):
         "bea_economic_context.json",
     )
     update_manifest("bea_regional",
-                    status="success" if records else "no_api_key",
+                    status="success" if records else ("no_api_key" if not BEA_API_KEY else "api_error"),
                     record_count=len(records))
 
 
