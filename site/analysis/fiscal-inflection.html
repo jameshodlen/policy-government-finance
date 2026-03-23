@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post-Pandemic Fiscal Inflection — State Finance Platform</title>
+  <meta name="description" content="State tax revenue below 15-year inflation-adjusted trend. Structural deficits emerging as pandemic surpluses evaporate. 50-state risk analysis.">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <nav class="site-nav"></nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1 id="fi-headline">Post-Pandemic Fiscal Inflection</h1>
+      <p class="subtitle" id="fi-subtitle">Loading fiscal data...</p>
+    </div>
+
+    <!-- Hero Stats -->
+    <section class="section">
+      <div class="summary-stats" id="fi-summary-stats"></div>
+      <div id="fi-freshness" style="text-align:right;margin-top:0.5rem;"></div>
+    </section>
+
+    <!-- Inflection Chart -->
+    <section class="section">
+      <div class="section-header">
+        <h2>The Inflection Point</h2>
+      </div>
+      <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+        Aggregate state revenue surged during the pandemic (federal transfers + stimulus-fueled tax receipts) then began reverting. The dashed line shows the pre-pandemic growth trend projected forward.
+      </p>
+      <div class="chart-container" id="inflection-chart" style="min-height:350px;"></div>
+    </section>
+
+    <!-- State Risk Matrix -->
+    <section class="section">
+      <div class="section-header">
+        <h2>State Risk Matrix</h2>
+      </div>
+      <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+        Risk signals based on revenue volatility, reserve adequacy, and whether expenditure growth outpaces revenue growth over 2021&ndash;2024.
+      </p>
+      <div id="risk-table"></div>
+    </section>
+
+    <!-- WI vs MN Spotlight -->
+    <section class="section">
+      <h2>Spotlight: Wisconsin vs. Minnesota</h2>
+      <div class="content-grid two-col" id="wi-mn-spotlight">
+        <p style="color:var(--color-text-muted);">Loading comparison...</p>
+      </div>
+    </section>
+
+    <!-- Competing Lenses -->
+    <section class="section">
+      <h2>Competing Analytical Perspectives</h2>
+      <p style="font-size:0.85rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+        The same fiscal data can support different policy conclusions depending on the analytical framework applied.
+      </p>
+      <div class="lenses-container">
+        <div class="lens-card equity">
+          <div class="lens-label">Equity &amp; Adequacy</div>
+          <p>Structural deficits threaten service continuity for the populations most dependent on public services. When revenues fall short, cuts typically land on discretionary spending &mdash; social services, housing assistance, public health &mdash; before touching entitlements or debt service. The equity question: who bears the cost of fiscal retrenchment?</p>
+        </div>
+        <div class="lens-card efficiency">
+          <div class="lens-label">Efficiency &amp; Growth</div>
+          <p>Pandemic-era spending increases &mdash; fueled by one-time federal transfers &mdash; are becoming structural. States that hired permanently with temporary money face recurring obligations without recurring revenue. The efficiency question: did states build structural spending on a one-time revenue base?</p>
+        </div>
+        <div class="lens-card process">
+          <div class="lens-label">Process &amp; Governance</div>
+          <p>49 states have some form of balanced budget requirement, but definitions vary enormously. Some require balance only at enactment, others at year-end. Reserve fund policies &mdash; rainy day fund targets, deposit rules, withdrawal triggers &mdash; determine whether states can weather revenue downturns without immediate cuts. The process question: are institutional guardrails adequate?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="section">
+      <div class="card" style="border-left:3px solid var(--color-accent);">
+        <h3>Methodology Note</h3>
+        <p>Revenue and expenditure trends are calculated from the 10-year series (2015&ndash;2024) in each state's profile data. Growth rates compare 2021 values to 2024 values to capture the post-pandemic trajectory. The "15-year trend" projection uses the 2015&ndash;2019 compound annual growth rate extrapolated forward, representing what revenue would have been without the pandemic disruption.</p>
+        <p style="font-size:0.85rem;color:var(--color-text-muted);">Revenue volatility index from Pew Charitable Trusts. Reserve days calculated from rainy day fund balance relative to daily general fund expenditure. All monetary values are nominal (not inflation-adjusted) unless noted. Data vintage: sample data for development &mdash; connect live pipelines for production figures.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/fiscal-inflection.js"></script>
+</body>
+</html>

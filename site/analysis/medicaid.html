@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicaid: The Budget Category That Swallows Everything — State Finance Platform</title>
+  <meta name="description" content="Medicaid is the largest state spending category. 40+ states expanded. FMAP rates range from 50% to 77%. 50-state fiscal analysis of Medicaid's budget impact.">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <nav class="site-nav"></nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1 id="med-headline">Medicaid: The Budget Category That Swallows Everything</h1>
+      <p class="subtitle" id="med-subtitle">Loading Medicaid data...</p>
+    </div>
+
+    <!-- Hero Stats -->
+    <section class="section">
+      <div class="summary-stats" id="med-summary-stats"></div>
+      <div id="med-freshness" style="text-align:right;margin-top:0.5rem;"></div>
+    </section>
+
+    <!-- Expansion Map -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Medicaid Expansion Map</h2>
+      </div>
+      <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+        40 states plus DC have expanded Medicaid under the ACA. Expansion states receive a 90% federal matching rate for the expansion population, vs. the standard FMAP rate (50&ndash;77%) for traditional enrollees.
+      </p>
+      <div class="map-container chart-container" id="expansion-map"></div>
+    </section>
+
+    <!-- FMAP Bar Chart -->
+    <section class="section">
+      <div class="section-header">
+        <h2>The FMAP Divide</h2>
+      </div>
+      <p style="font-size:0.9rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+        Federal Medical Assistance Percentage &mdash; the share of Medicaid costs paid by the federal government. Mississippi receives 77 cents per dollar from Washington; California and New York pay 50 cents of every dollar themselves. This structural difference profoundly shapes state fiscal dynamics.
+      </p>
+      <div class="chart-container" id="fmap-chart" style="min-height:600px;"></div>
+    </section>
+
+    <!-- Medicaid % of Budget Table -->
+    <section class="section">
+      <div class="section-header">
+        <h2>Medicaid as Percentage of Budget</h2>
+      </div>
+      <div id="medicaid-table"></div>
+    </section>
+
+    <!-- HR 1 Work Requirements -->
+    <section class="section">
+      <h2>The Work Requirements Question</h2>
+      <div class="card" style="border-left:3px solid var(--color-aging);margin-bottom:1.5rem;">
+        <h4>Policy Development Context</h4>
+        <p style="font-size:0.85rem;margin:0;">Congressional proposals as of early 2026 include Medicaid work requirements for able-bodied adults without dependents. Implementation details, effective dates, and state flexibility provisions remain under active negotiation. The analysis below reflects the policy landscape as of the time of writing and may not reflect final enacted provisions.</p>
+      </div>
+
+      <div class="content-grid two-col">
+        <div>
+          <h3>What Work Requirements Would Do</h3>
+          <p>Require able-bodied adults ages 19&ndash;64 without dependents to document 80+ hours per month of work, job training, education, or community service to maintain Medicaid coverage. States would administer verification, with non-compliance resulting in coverage loss after a grace period.</p>
+          <p>Arkansas implemented work requirements briefly in 2018&ndash;2019 before a federal court struck them down. During that period, an estimated 18,000 people lost coverage &mdash; primarily due to reporting barriers, not refusal to work. Georgia and several other states have pending Section 1115 waiver requests that include work-related provisions.</p>
+        </div>
+        <div>
+          <h3>States Most Exposed</h3>
+          <p>Non-expansion states with high Medicaid enrollment relative to population face the greatest disruption. States with large rural populations face additional barriers &mdash; limited public transportation, seasonal employment, and fewer job training providers complicate documentation requirements.</p>
+          <p>The estimated 3.7 million figure comes from CBO and KFF analyses projecting coverage loss under various work requirement designs, accounting for both non-compliance with actual requirements and administrative churn (people who meet requirements but fail to document them).</p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:1.5rem;">Wisconsin Spotlight: Waiver Coverage vs. Full Expansion</h3>
+      <p>Wisconsin occupies a unique position. The state covers adults to 100% FPL via a Section 1115 waiver but doesn't receive the enhanced 90% FMAP that expansion states get. WI's standard FMAP is ~59.36%. Full expansion would bring the enhanced match for the expansion population while extending coverage to 138% FPL &mdash; but the state's current waiver already covers the core low-income population.</p>
+      <p>Under work requirements, Wisconsin's waiver population could face compliance burdens similar to expansion states, but with the state bearing a larger share of administrative costs at the lower FMAP rate.</p>
+
+      <!-- Competing lenses on work requirements -->
+      <div class="lenses-container" style="margin-top:1.5rem;">
+        <div class="lens-card equity">
+          <div class="lens-label">Equity &amp; Adequacy</div>
+          <p>Work requirements create barriers to coverage that disproportionately affect people with unstable employment, chronic health conditions that don't meet disability thresholds, and those in rural areas with limited job access. The Arkansas experience showed most coverage losses were due to reporting failures, not unwillingness to work.</p>
+        </div>
+        <div class="lens-card efficiency">
+          <div class="lens-label">Efficiency &amp; Growth</div>
+          <p>Work requirements align Medicaid with the program's original intent as temporary assistance, not permanent coverage for working-age adults. Encouraging workforce participation can reduce long-term dependency and improve state fiscal sustainability by naturally reducing enrollment as economic conditions improve.</p>
+        </div>
+        <div class="lens-card process">
+          <div class="lens-label">Process &amp; Governance</div>
+          <p>The administrative cost of verifying work compliance is substantial. States must build reporting systems, process documentation, manage appeals, and handle coverage transitions. The administrative burden may offset fiscal savings from reduced enrollment, particularly in states with limited existing verification infrastructure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WI vs MN on Medicaid -->
+    <section class="section">
+      <h2>Wisconsin vs. Minnesota on Medicaid</h2>
+      <div class="content-grid two-col" id="wi-mn-medicaid">
+        <p style="color:var(--color-text-muted);">Loading...</p>
+      </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="section">
+      <div class="card" style="border-left:3px solid var(--color-accent);">
+        <h3>Methodology &amp; Data Sources</h3>
+        <p>Medicaid expenditure data from the sample data generator, calibrated to CMS-64 quarterly reports. FMAP rates are approximate FY2025 values from CMS. Expansion status reflects state decisions through early 2026.</p>
+        <p>FMAP is calculated annually based on state per capita income relative to national per capita income. Wealthier states receive the statutory floor (50%); poorer states receive higher rates up to the statutory ceiling (~83%). The enhanced expansion FMAP (90% in perpetuity after 2020 phase-down) applies only to the expansion population (adults 100&ndash;138% FPL).</p>
+        <p style="font-size:0.85rem;color:var(--color-text-muted);">Per-capita Medicaid spending calculated from total Medicaid expenditure divided by state population (not Medicaid enrollment), providing a budget burden measure rather than per-enrollee cost.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/topojson-client@3"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/medicaid.js"></script>
+</body>
+</html>
