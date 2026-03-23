@@ -1,0 +1,9 @@
+{
+  "source": "Treasury Fiscal Data (fiscaldata.treasury.gov)",
+  "records": {
+    "receipts": [],
+    "outlays": [],
+    "debt": []
+  },
+  "sample": true
+}
