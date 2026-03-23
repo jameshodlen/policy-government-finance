@@ -11,9 +11,10 @@ window.SFP = SFP;
 SFP.NAV_ITEMS = [
   { label: 'Dashboard', href: '/' },
   { label: 'States', href: '/states/index.html' },
-  { label: 'Analysis', href: '/analysis/pensions.html' },
+  { label: 'Pensions', href: '/analysis/pensions.html' },
+  { label: 'Fiscal Trends', href: '/analysis/fiscal-inflection.html' },
+  { label: 'Medicaid', href: '/analysis/medicaid.html' },
   { label: 'Methodology', href: '/methodology/' },
-  { label: 'Data Sources', href: '/methodology/data-sources.html' }
 ];
 
 SFP.renderNav = function(currentPath) {
