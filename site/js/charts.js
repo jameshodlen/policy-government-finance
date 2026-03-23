@@ -81,13 +81,7 @@ SFP.choroplethMap = function(container, topoData, stateData, options) {
     .on('click', function(event, d) {
       var sd = dataByFips[d.id] || dataByFips[String(d.id).padStart(2, '0')];
       if (sd && sd.abbrev) {
-        var abbr = sd.abbrev.toLowerCase();
-        var profileStates = options.profileStates || ['wi', 'mn'];
-        if (profileStates.indexOf(abbr) >= 0) {
-          window.location.href = '/states/' + abbr + '.html';
-        } else {
-          window.location.href = '/states/index.html#' + sd.abbrev;
-        }
+        window.location.href = '/states/' + sd.abbrev.toLowerCase() + '.html';
       }
     });
 

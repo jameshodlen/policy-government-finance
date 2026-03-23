@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vermont Fiscal Profile — State Finance Platform</title>
+  <meta name="description" content="Vermont fiscal profile: revenue, expenditure, debt, pensions, reserves, and economic context.">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <nav class="site-nav"></nav>
+
+  <main class="container">
+    <!-- Header -->
+    <div class="page-header">
+      <h1 id="state-name">Vermont</h1>
+      <p class="subtitle" id="state-subtitle">Loading fiscal data...</p>
+    </div>
+
+    <div class="content-grid sidebar">
+      <!-- Main Content -->
+      <div>
+        <!-- Revenue -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Revenue Composition</h2>
+            <span data-freshness data-source="Census Bureau"></span>
+          </div>
+          <div class="chart-container" id="revenue-chart"></div>
+        </section>
+
+        <!-- Expenditure -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Expenditure by Function</h2>
+            <span data-freshness data-source="NASBO"></span>
+          </div>
+          <div class="chart-container" id="expenditure-chart"></div>
+        </section>
+
+        <!-- 10-Year Trend -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Revenue vs. Expenditure Trend (10-Year)</h2>
+            <span data-freshness data-source="Census/FRED"></span>
+          </div>
+          <div class="chart-container" id="trend-chart"></div>
+        </section>
+
+        <!-- Pensions -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Pension System</h2>
+            <span data-freshness data-source="Public Plans Database"></span>
+          </div>
+          <p>Vermont's public pension system provides retirement benefits for state and local government employees. Funded ratios, contribution levels, and investment return assumptions vary across plans and affect the state's long-term fiscal outlook.</p>
+          <div class="summary-stats" id="pension-stats"></div>
+          <div class="chart-container" id="pension-trend-chart" style="min-height:240px;"></div>
+        </section>
+
+        <!-- Federal Dependency -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Federal Dependency</h2>
+            <span data-freshness data-source="USASpending.gov"></span>
+          </div>
+          <p>Federal transfers as a percentage of total state revenue:</p>
+          <div style="display:flex;align-items:center;gap:1rem;margin:1rem 0;">
+            <div style="flex:1;background:var(--color-border-light);border-radius:4px;height:24px;overflow:hidden;">
+              <div id="fed-dependency-bar" style="height:100%;background:var(--color-data-1);border-radius:4px;transition:width 0.5s;"></div>
+            </div>
+            <span id="fed-dependency-value" style="font-size:1.25rem;font-weight:700;min-width:4em;">&mdash;</span>
+          </div>
+        </section>
+
+        <!-- Competing Lenses -->
+        <section class="section">
+          <h2>Competing Analytical Perspectives</h2>
+          <p style="font-size:0.85rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+            The same fiscal data can support different policy conclusions depending on the analytical framework applied. We present three major perspectives:
+          </p>
+          <div class="lenses-container">
+            <div class="lens-card equity">
+              <div class="lens-label">Equity &amp; Adequacy</div>
+              <p>How does Vermont's tax structure distribute the burden across income levels? Are public services adequately funded relative to need? What disparities exist in how fiscal resources reach different communities?</p>
+            </div>
+            <div class="lens-card efficiency">
+              <div class="lens-label">Efficiency &amp; Growth</div>
+              <p>How does Vermont's tax burden compare to neighboring states? What fiscal pressures — from pension obligations to infrastructure needs — affect long-term competitiveness and economic growth?</p>
+            </div>
+            <div class="lens-card process">
+              <div class="lens-label">Process &amp; Governance</div>
+              <p>Does Vermont follow sound budgeting practices? How timely and transparent is fiscal reporting? What do independent assessments (Volcker Alliance, Pew) say about the state's budget process and financial management?</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <div>
+        <div class="card stats-sidebar" id="key-stats">
+          <p style="color:var(--color-text-muted);">Loading...</p>
+        </div>
+
+        <div class="card" style="margin-top:1.5rem;">
+          <h4>Related</h4>
+          <ul style="list-style:none;padding:0;margin:0;font-size:0.9rem;">
+            <li style="padding:0.4rem 0;border-bottom:1px solid var(--color-border-light);">
+              <a href="/analysis/pensions.html">50-State Pension Analysis</a>
+            </li>
+            <li style="padding:0.4rem 0;border-bottom:1px solid var(--color-border-light);">
+              <a href="/states/nh.html">Compare: New Hampshire</a>
+            </li>
+            <li style="padding:0.4rem 0;">
+              <a href="/methodology/data-sources.html">Data Sources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/state-profile.js"></script>
+</body>
+</html>

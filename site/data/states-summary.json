@@ -1,6 +1,6 @@
 {
   "sample": true,
-  "generated": "2026-03-21T01:25:54.527456Z",
+  "generated": "2026-03-23T19:07:50.665510Z",
   "states": [
     {
       "abbrev": "AL",
@@ -1951,6 +1951,45 @@
       "medicaidWaiverCoverage": false,
       "hasIncomeTax": false,
       "biennialBudget": true
+    },
+    {
+      "abbrev": "DC",
+      "name": "District of Columbia",
+      "fips": "11",
+      "population": 689545,
+      "gdp": 158000000000.0,
+      "gdpPerCapita": 229137,
+      "personalIncome": 114557714987,
+      "personalIncomePerCapita": 161865,
+      "totalRevenue": 7380970889,
+      "revenuePerCapita": 10704,
+      "incomeTaxRevenue": 2241439994,
+      "salesTaxRevenue": 2220285791,
+      "propertyTaxRevenue": 146470962,
+      "federalTransfers": 2025809211,
+      "otherRevenue": 746964930,
+      "totalExpenditure": 7749209249,
+      "expenditurePerCapita": 11238,
+      "educationSpending": 2316734862,
+      "medicaidSpending": 1664991549,
+      "transportationSpending": 715366971,
+      "correctionsSpending": 312709407,
+      "otherExpenditure": 2739406460,
+      "totalDebt": 3662521372,
+      "debtPerCapita": 5312,
+      "debtAsPercentGDP": 2.3,
+      "creditRating": "AA+",
+      "pensionFundedRatio": 91.2,
+      "unfundedLiability": 908848099,
+      "annualPensionContribution": 52907488,
+      "pensionContributionAsPercentRevenue": 0.7,
+      "reserveDays": 30,
+      "revenueVolatility": 18.5,
+      "federalDependencyRatio": 27.4,
+      "medicaidExpanded": true,
+      "medicaidWaiverCoverage": false,
+      "hasIncomeTax": true,
+      "biennialBudget": false
     }
   ]
 }

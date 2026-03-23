@@ -1,0 +1,263 @@
+{
+  "sample": true,
+  "abbrev": "NH",
+  "name": "New Hampshire",
+  "fips": "33",
+  "population": 1395231,
+  "gdp": 103000000000.0,
+  "gdpPerCapita": 73823,
+  "personalIncome": 73958131844,
+  "personalIncomePerCapita": 53504,
+  "totalRevenue": 12508837183,
+  "revenuePerCapita": 8965,
+  "incomeTaxRevenue": 0,
+  "salesTaxRevenue": 6595388549,
+  "propertyTaxRevenue": 804979340,
+  "federalTransfers": 2755559021,
+  "otherRevenue": 2352910273,
+  "totalExpenditure": 12192663486,
+  "expenditurePerCapita": 8739,
+  "educationSpending": 3825645003,
+  "medicaidSpending": 3372263552,
+  "transportationSpending": 1112921801,
+  "correctionsSpending": 595031888,
+  "otherExpenditure": 3286801242,
+  "totalDebt": 5089223223,
+  "debtPerCapita": 3648,
+  "debtAsPercentGDP": 4.9,
+  "creditRating": "AA+",
+  "pensionFundedRatio": 68.7,
+  "unfundedLiability": 4302578738,
+  "annualPensionContribution": 221277864,
+  "pensionContributionAsPercentRevenue": 1.8,
+  "reserveDays": 14,
+  "revenueVolatility": 12.4,
+  "federalDependencyRatio": 22.0,
+  "medicaidExpanded": true,
+  "medicaidWaiverCoverage": false,
+  "hasIncomeTax": false,
+  "biennialBudget": true,
+  "fiscalYear": "July 1 - June 30",
+  "revenueTrend": [
+    {
+      "year": 2015,
+      "value": 9549165696
+    },
+    {
+      "year": 2016,
+      "value": 9893094226
+    },
+    {
+      "year": 2017,
+      "value": 10651652285
+    },
+    {
+      "year": 2018,
+      "value": 10952836883
+    },
+    {
+      "year": 2019,
+      "value": 11744600056
+    },
+    {
+      "year": 2020,
+      "value": 12326920869
+    },
+    {
+      "year": 2021,
+      "value": 12944518105
+    },
+    {
+      "year": 2022,
+      "value": 13385436078
+    },
+    {
+      "year": 2023,
+      "value": 13841246826
+    },
+    {
+      "year": 2024,
+      "value": 13788139767
+    }
+  ],
+  "expenditureTrend": [
+    {
+      "year": 2015,
+      "value": 9192924712
+    },
+    {
+      "year": 2016,
+      "value": 9478722557
+    },
+    {
+      "year": 2017,
+      "value": 9287570508
+    },
+    {
+      "year": 2018,
+      "value": 9892793520
+    },
+    {
+      "year": 2019,
+      "value": 9943678064
+    },
+    {
+      "year": 2020,
+      "value": 10561918553
+    },
+    {
+      "year": 2021,
+      "value": 11102430440
+    },
+    {
+      "year": 2022,
+      "value": 11371861278
+    },
+    {
+      "year": 2023,
+      "value": 11632503694
+    },
+    {
+      "year": 2024,
+      "value": 11727216256
+    }
+  ],
+  "revenueBreakdown": [
+    {
+      "category": "Income Tax",
+      "value": 0,
+      "color": "#2c5f8a"
+    },
+    {
+      "category": "Sales Tax",
+      "value": 6595388549,
+      "color": "#4a90b8"
+    },
+    {
+      "category": "Federal Transfers",
+      "value": 2755559021,
+      "color": "#7ab8d4"
+    },
+    {
+      "category": "Property Tax",
+      "value": 804979340,
+      "color": "#a8d4e6"
+    },
+    {
+      "category": "Other",
+      "value": 2352910273,
+      "color": "#d4ecf4"
+    }
+  ],
+  "expenditureBreakdown": [
+    {
+      "category": "Education",
+      "value": 3825645003,
+      "color": "#2c5f8a"
+    },
+    {
+      "category": "Medicaid",
+      "value": 3372263552,
+      "color": "#4a90b8"
+    },
+    {
+      "category": "Transportation",
+      "value": 1112921801,
+      "color": "#7ab8d4"
+    },
+    {
+      "category": "Corrections",
+      "value": 595031888,
+      "color": "#a8d4e6"
+    },
+    {
+      "category": "Other",
+      "value": 3286801242,
+      "color": "#d4ecf4"
+    }
+  ],
+  "pensionHistory": [
+    {
+      "year": 2015,
+      "value": 138801852
+    },
+    {
+      "year": 2016,
+      "value": 144753983
+    },
+    {
+      "year": 2017,
+      "value": 150945336
+    },
+    {
+      "year": 2018,
+      "value": 160039498
+    },
+    {
+      "year": 2019,
+      "value": 164221742
+    },
+    {
+      "year": 2020,
+      "value": 171498116
+    },
+    {
+      "year": 2021,
+      "value": 179735405
+    },
+    {
+      "year": 2022,
+      "value": 186195262
+    },
+    {
+      "year": 2023,
+      "value": 196303485
+    },
+    {
+      "year": 2024,
+      "value": 206137033
+    }
+  ],
+  "fundedRatioHistory": [
+    {
+      "year": 2015,
+      "value": 60.7
+    },
+    {
+      "year": 2016,
+      "value": 58.1
+    },
+    {
+      "year": 2017,
+      "value": 60.3
+    },
+    {
+      "year": 2018,
+      "value": 61.5
+    },
+    {
+      "year": 2019,
+      "value": 60.8
+    },
+    {
+      "year": 2020,
+      "value": 65.0
+    },
+    {
+      "year": 2021,
+      "value": 65.3
+    },
+    {
+      "year": 2022,
+      "value": 66.4
+    },
+    {
+      "year": 2023,
+      "value": 65.8
+    },
+    {
+      "year": 2024,
+      "value": 67.5
+    }
+  ]
+}
