@@ -6,33 +6,33 @@
   "population": 779261,
   "gdp": 63000000000.0,
   "gdpPerCapita": 80846,
-  "personalIncome": 45591462896,
-  "personalIncomePerCapita": 62642,
-  "totalRevenue": 5507812374,
-  "revenuePerCapita": 7068,
-  "incomeTaxRevenue": 1699963947,
-  "salesTaxRevenue": 1380639241,
-  "propertyTaxRevenue": 90808231,
-  "federalTransfers": 1721798961,
-  "otherRevenue": 614601993,
-  "totalExpenditure": 5324836867,
-  "expenditurePerCapita": 6833,
-  "educationSpending": 1654558601,
-  "medicaidSpending": 1463225582,
-  "transportationSpending": 356082343,
-  "correctionsSpending": 290624459,
-  "otherExpenditure": 1560345882,
-  "totalDebt": 6069137646,
-  "debtPerCapita": 7788,
-  "debtAsPercentGDP": 9.6,
+  "personalIncome": 43793430972,
+  "personalIncomePerCapita": 55266,
+  "totalRevenue": 5136662587,
+  "revenuePerCapita": 6592,
+  "incomeTaxRevenue": 1499074866,
+  "salesTaxRevenue": 1202815957,
+  "propertyTaxRevenue": 202059814,
+  "federalTransfers": 1838263132,
+  "otherRevenue": 394448818,
+  "totalExpenditure": 5239121013,
+  "expenditurePerCapita": 6723,
+  "educationSpending": 1711567447,
+  "medicaidSpending": 1135730965,
+  "transportationSpending": 505233847,
+  "correctionsSpending": 274727820,
+  "otherExpenditure": 1611860933,
+  "totalDebt": 2094027999,
+  "debtPerCapita": 2687,
+  "debtAsPercentGDP": 3.3,
   "creditRating": "AA+",
   "pensionFundedRatio": 69.3,
-  "unfundedLiability": 2437566964,
-  "annualPensionContribution": 100006394,
-  "pensionContributionAsPercentRevenue": 1.8,
+  "unfundedLiability": 4309141944,
+  "annualPensionContribution": 338650428,
+  "pensionContributionAsPercentRevenue": 6.6,
   "reserveDays": 142,
   "revenueVolatility": 62.4,
-  "federalDependencyRatio": 31.3,
+  "federalDependencyRatio": 35.8,
   "medicaidExpanded": true,
   "medicaidWaiverCoverage": false,
   "hasIncomeTax": true,
@@ -41,223 +41,223 @@
   "revenueTrend": [
     {
       "year": 2015,
-      "value": 4253032394
+      "value": 3967505212
     },
     {
       "year": 2016,
-      "value": 4425322652
+      "value": 4066255486
     },
     {
       "year": 2017,
-      "value": 4397676532
+      "value": 4226222043
     },
     {
       "year": 2018,
-      "value": 4502862708
+      "value": 4380313583
     },
     {
       "year": 2019,
-      "value": 4628109515
+      "value": 4549943520
     },
     {
       "year": 2020,
-      "value": 4859487048
+      "value": 4790383248
     },
     {
       "year": 2021,
-      "value": 4935989017
+      "value": 4964199418
     },
     {
       "year": 2022,
-      "value": 5156186535
+      "value": 5041298991
     },
     {
       "year": 2023,
-      "value": 5022913936
+      "value": 5114846648
     },
     {
       "year": 2024,
-      "value": 5052206976
+      "value": 5327944137
     }
   ],
   "expenditureTrend": [
     {
       "year": 2015,
-      "value": 3924315863
+      "value": 3764487659
     },
     {
       "year": 2016,
-      "value": 4179440111
+      "value": 3950328534
     },
     {
       "year": 2017,
-      "value": 4395950557
+      "value": 4145016004
     },
     {
       "year": 2018,
-      "value": 4445218624
+      "value": 4286453609
     },
     {
       "year": 2019,
-      "value": 4695183910
+      "value": 4369488793
     },
     {
       "year": 2020,
-      "value": 4736227720
+      "value": 4367187057
     },
     {
       "year": 2021,
-      "value": 4978991789
+      "value": 4421867300
     },
     {
       "year": 2022,
-      "value": 5207157322
+      "value": 4432839722
     },
     {
       "year": 2023,
-      "value": 5355936980
+      "value": 4590353686
     },
     {
       "year": 2024,
-      "value": 5531559012
+      "value": 4710410940
     }
   ],
   "revenueBreakdown": [
     {
       "category": "Income Tax",
-      "value": 1699963947,
+      "value": 1499074866,
       "color": "#2c5f8a"
     },
     {
       "category": "Sales Tax",
-      "value": 1380639241,
+      "value": 1202815957,
       "color": "#4a90b8"
     },
     {
       "category": "Federal Transfers",
-      "value": 1721798961,
+      "value": 1838263132,
       "color": "#7ab8d4"
     },
     {
       "category": "Property Tax",
-      "value": 90808231,
+      "value": 202059814,
       "color": "#a8d4e6"
     },
     {
       "category": "Other",
-      "value": 614601993,
+      "value": 394448818,
       "color": "#d4ecf4"
     }
   ],
   "expenditureBreakdown": [
     {
       "category": "Education",
-      "value": 1654558601,
+      "value": 1711567447,
       "color": "#2c5f8a"
     },
     {
       "category": "Medicaid",
-      "value": 1463225582,
+      "value": 1135730965,
       "color": "#4a90b8"
     },
     {
       "category": "Transportation",
-      "value": 356082343,
+      "value": 505233847,
       "color": "#7ab8d4"
     },
     {
       "category": "Corrections",
-      "value": 290624459,
+      "value": 274727820,
       "color": "#a8d4e6"
     },
     {
       "category": "Other",
-      "value": 1560345882,
+      "value": 1611860933,
       "color": "#d4ecf4"
     }
   ],
   "pensionHistory": [
     {
       "year": 2015,
-      "value": 65216619
+      "value": 214468938
     },
     {
       "year": 2016,
-      "value": 68524912
+      "value": 228935320
     },
     {
       "year": 2017,
-      "value": 70489149
+      "value": 240974241
     },
     {
       "year": 2018,
-      "value": 74014944
+      "value": 253252297
     },
     {
       "year": 2019,
-      "value": 78125521
+      "value": 268741799
     },
     {
       "year": 2020,
-      "value": 80060239
+      "value": 287749651
     },
     {
       "year": 2021,
-      "value": 84513084
+      "value": 292912893
     },
     {
       "year": 2022,
-      "value": 88149526
+      "value": 311698450
     },
     {
       "year": 2023,
-      "value": 92045209
+      "value": 316006517
     },
     {
       "year": 2024,
-      "value": 96551917
+      "value": 326786235
     }
   ],
   "fundedRatioHistory": [
     {
       "year": 2015,
-      "value": 62.2
+      "value": 63.3
     },
     {
       "year": 2016,
-      "value": 57.0
+      "value": 60.0
     },
     {
       "year": 2017,
-      "value": 58.2
+      "value": 65.0
     },
     {
       "year": 2018,
-      "value": 62.5
+      "value": 64.3
     },
     {
       "year": 2019,
-      "value": 66.0
+      "value": 61.1
     },
     {
       "year": 2020,
-      "value": 66.4
+      "value": 62.4
     },
     {
       "year": 2021,
-      "value": 63.6
+      "value": 65.4
     },
     {
       "year": 2022,
-      "value": 65.1
+      "value": 67.7
     },
     {
       "year": 2023,
-      "value": 67.2
+      "value": 68.2
     },
     {
       "year": 2024,
-      "value": 68.8
+      "value": 67.9
     }
   ]
 }

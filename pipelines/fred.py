@@ -107,7 +107,7 @@ def output(records):
         "fred_economic_series.json",
     )
     update_manifest("fred",
-                    status="success" if records else "no_api_key",
+                    status="success" if records else ("no_api_key" if not FRED_API_KEY else "api_error"),
                     record_count=sum(len(v) for v in records.values()))
 
 

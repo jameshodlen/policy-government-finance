@@ -83,6 +83,9 @@ STATES = [
 # States with no income tax
 NO_INCOME_TAX = {"AK", "FL", "NV", "NH", "SD", "TN", "TX", "WA", "WY"}
 
+# States with no general sales tax
+NO_SALES_TAX = {"MT", "NH", "OR", "DE", "AK"}
+
 # Medicaid expansion states (40 + DC as of 2025)
 NON_EXPANSION = {"AL", "FL", "GA", "KS", "MS", "SC", "TN", "TX", "WI", "WY"}
 
@@ -156,22 +159,47 @@ def generate_state_summary(abbrev, name, fips, pop, gdp):
     # Revenue (calibrated: US average ~$8K per capita total state revenue)
     base_rev = pop * random.uniform(6500, 11000)
 
-    # Draw raw component weights, then normalize to sum to base_rev
-    # This prevents negative otherRevenue from percentage overflows
-    # No-income-tax states get higher sales/other weights to avoid
-    # inflated federal dependency ratios from a smaller weight pool
-    if abbrev in NO_INCOME_TAX:
-        raw_income = 0
-        raw_sales = random.uniform(0.35, 0.55)
-        raw_property = random.uniform(0.02, 0.08)
-        raw_federal = random.uniform(0.15, 0.30)
-        raw_other = random.uniform(0.15, 0.30)
-    else:
+    # Draw raw component weights, then normalize to sum to base_rev.
+    # Handles 4 categories: both taxes, no income tax, no sales tax,
+    # neither (AK, NH). Weights are proportional — normalization
+    # guarantees all components are positive and sum to base_rev.
+    has_income = abbrev not in NO_INCOME_TAX
+    has_sales = abbrev not in NO_SALES_TAX
+
+    if has_income and has_sales:
+        # Most states — both income and sales tax
         raw_income = random.uniform(0.25, 0.40)
         raw_sales = random.uniform(0.20, 0.35)
         raw_property = random.uniform(0.01, 0.05)
         raw_federal = random.uniform(0.25, 0.40)
         raw_other = random.uniform(0.05, 0.15)
+    elif not has_income and has_sales:
+        # FL, NV, SD, TN, TX, WA, WY — no income tax, has sales tax
+        raw_income = 0
+        raw_sales = random.uniform(0.35, 0.55)
+        raw_property = random.uniform(0.02, 0.08)
+        raw_federal = random.uniform(0.15, 0.30)
+        raw_other = random.uniform(0.15, 0.30)
+    elif has_income and not has_sales:
+        # MT, OR, DE — has income tax, no sales tax
+        raw_income = random.uniform(0.35, 0.55)
+        raw_sales = 0
+        raw_property = random.uniform(0.02, 0.08)
+        raw_federal = random.uniform(0.25, 0.40)
+        raw_other = random.uniform(0.15, 0.30)
+    else:
+        # AK, NH — neither income nor sales tax
+        raw_income = 0
+        raw_sales = 0
+        raw_property = random.uniform(0.03, 0.10)
+        raw_federal = random.uniform(0.20, 0.35)
+        raw_other = random.uniform(0.40, 0.65)
+
+    # Alaska-specific: real federal dependency is ~27-30%. AK has massive
+    # Permanent Fund and oil revenue in "other", which dilutes federal share.
+    if abbrev == "AK":
+        raw_federal = random.uniform(0.18, 0.24)
+        raw_other = random.uniform(0.55, 0.70)
 
     total_weight = raw_income + raw_sales + raw_property + raw_federal + raw_other
     income_tax = base_rev * (raw_income / total_weight)

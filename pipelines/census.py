@@ -112,7 +112,7 @@ def output(records, year=2022):
         "census_gov_finances.json",
     )
     update_manifest("census_gov_finances",
-                    status="success" if records else "no_api_key",
+                    status="success" if records else ("no_api_key" if not CENSUS_API_KEY else "api_error"),
                     record_count=len(records))
 
 

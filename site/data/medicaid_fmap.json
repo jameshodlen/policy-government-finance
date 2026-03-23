@@ -1,0 +1,407 @@
+{
+  "source": "CMS / Medicaid.gov",
+  "records": [
+    {
+      "abbrev": "AL",
+      "name": "Alabama",
+      "fips": "01",
+      "fmapRate": 72.58,
+      "expansionState": false,
+      "expansionFmapRate": null
+    },
+    {
+      "abbrev": "AK",
+      "name": "Alaska",
+      "fips": "02",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "AZ",
+      "name": "Arizona",
+      "fips": "04",
+      "fmapRate": 70.64,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "AR",
+      "name": "Arkansas",
+      "fips": "05",
+      "fmapRate": 72.05,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "CA",
+      "name": "California",
+      "fips": "06",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "CO",
+      "name": "Colorado",
+      "fips": "08",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "CT",
+      "name": "Connecticut",
+      "fips": "09",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "DE",
+      "name": "Delaware",
+      "fips": "10",
+      "fmapRate": 56.36,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "FL",
+      "name": "Florida",
+      "fips": "12",
+      "fmapRate": 59.97,
+      "expansionState": false,
+      "expansionFmapRate": null
+    },
+    {
+      "abbrev": "GA",
+      "name": "Georgia",
+      "fips": "13",
+      "fmapRate": 66.85,
+      "expansionState": false,
+      "expansionFmapRate": null
+    },
+    {
+      "abbrev": "HI",
+      "name": "Hawaii",
+      "fips": "15",
+      "fmapRate": 54.66,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "ID",
+      "name": "Idaho",
+      "fips": "16",
+      "fmapRate": 69.78,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "IL",
+      "name": "Illinois",
+      "fips": "17",
+      "fmapRate": 51.12,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "IN",
+      "name": "Indiana",
+      "fips": "18",
+      "fmapRate": 67.1,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "IA",
+      "name": "Iowa",
+      "fips": "19",
+      "fmapRate": 59.72,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "KS",
+      "name": "Kansas",
+      "fips": "20",
+      "fmapRate": 59.61,
+      "expansionState": false,
+      "expansionFmapRate": null
+    },
+    {
+      "abbrev": "KY",
+      "name": "Kentucky",
+      "fips": "21",
+      "fmapRate": 72.73,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "LA",
+      "name": "Louisiana",
+      "fips": "22",
+      "fmapRate": 67.62,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "ME",
+      "name": "Maine",
+      "fips": "23",
+      "fmapRate": 63.39,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "MD",
+      "name": "Maryland",
+      "fips": "24",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "MA",
+      "name": "Massachusetts",
+      "fips": "25",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "MI",
+      "name": "Michigan",
+      "fips": "26",
+      "fmapRate": 63.94,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "MN",
+      "name": "Minnesota",
+      "fips": "27",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "MS",
+      "name": "Mississippi",
+      "fips": "28",
+      "fmapRate": 76.98,
+      "expansionState": false,
+      "expansionFmapRate": null
+    },
+    {
+      "abbrev": "MO",
+      "name": "Missouri",
+      "fips": "29",
+      "fmapRate": 64.43,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "MT",
+      "name": "Montana",
+      "fips": "30",
+      "fmapRate": 63.03,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "NE",
+      "name": "Nebraska",
+      "fips": "31",
+      "fmapRate": 55.16,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "NV",
+      "name": "Nevada",
+      "fips": "32",
+      "fmapRate": 59.48,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "NH",
+      "name": "New Hampshire",
+      "fips": "33",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "NJ",
+      "name": "New Jersey",
+      "fips": "34",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "NM",
+      "name": "New Mexico",
+      "fips": "35",
+      "fmapRate": 72.24,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "NY",
+      "name": "New York",
+      "fips": "36",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "NC",
+      "name": "North Carolina",
+      "fips": "37",
+      "fmapRate": 66.64,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "ND",
+      "name": "North Dakota",
+      "fips": "38",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "OH",
+      "name": "Ohio",
+      "fips": "39",
+      "fmapRate": 62.24,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "OK",
+      "name": "Oklahoma",
+      "fips": "40",
+      "fmapRate": 65.66,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "OR",
+      "name": "Oregon",
+      "fips": "41",
+      "fmapRate": 60.19,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "PA",
+      "name": "Pennsylvania",
+      "fips": "42",
+      "fmapRate": 54.59,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "RI",
+      "name": "Rhode Island",
+      "fips": "44",
+      "fmapRate": 53.05,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "SC",
+      "name": "South Carolina",
+      "fips": "45",
+      "fmapRate": 72.42,
+      "expansionState": false,
+      "expansionFmapRate": null
+    },
+    {
+      "abbrev": "SD",
+      "name": "South Dakota",
+      "fips": "46",
+      "fmapRate": 58.94,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "TN",
+      "name": "Tennessee",
+      "fips": "47",
+      "fmapRate": 65.01,
+      "expansionState": false,
+      "expansionFmapRate": null
+    },
+    {
+      "abbrev": "TX",
+      "name": "Texas",
+      "fips": "48",
+      "fmapRate": 60.44,
+      "expansionState": false,
+      "expansionFmapRate": null
+    },
+    {
+      "abbrev": "UT",
+      "name": "Utah",
+      "fips": "49",
+      "fmapRate": 66.51,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "VT",
+      "name": "Vermont",
+      "fips": "50",
+      "fmapRate": 54.72,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "VA",
+      "name": "Virginia",
+      "fips": "51",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "WA",
+      "name": "Washington",
+      "fips": "53",
+      "fmapRate": 50.0,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "WV",
+      "name": "West Virginia",
+      "fips": "54",
+      "fmapRate": 74.35,
+      "expansionState": true,
+      "expansionFmapRate": 90.0
+    },
+    {
+      "abbrev": "WI",
+      "name": "Wisconsin",
+      "fips": "55",
+      "fmapRate": 59.36,
+      "expansionState": false,
+      "expansionFmapRate": null
+    },
+    {
+      "abbrev": "WY",
+      "name": "Wyoming",
+      "fips": "56",
+      "fmapRate": 50.0,
+      "expansionState": false,
+      "expansionFmapRate": null
+    }
+  ],
+  "sample": true,
+  "note": "FMAP rates are approximate FY2025 values"
+}
