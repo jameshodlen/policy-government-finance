@@ -58,11 +58,7 @@
       label: 'State',
       render: function(val, d) {
         var abbr = d.abbrev.toLowerCase();
-        var hasProfile = abbr === 'wi' || abbr === 'mn';
-        if (hasProfile) {
-          return '<a class="state-link" href="/states/' + abbr + '.html">' + val + '</a>';
-        }
-        return val;
+        return '<a class="state-link" href="/states/' + abbr + '.html">' + val + '</a>';
       },
     },
     { key: 'revenuePerCapita', label: 'Rev/Capita', format: SFP.formatPerCapita, numeric: true },

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>District of Columbia Fiscal Profile — State Finance Platform</title>
+  <meta name="description" content="District of Columbia fiscal profile: revenue, expenditure, debt, pensions, reserves, and economic context.">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <nav class="site-nav"></nav>
+
+  <main class="container">
+    <!-- Header -->
+    <div class="page-header">
+      <h1 id="state-name">District of Columbia</h1>
+      <p class="subtitle" id="state-subtitle">Loading fiscal data...</p>
+    </div>
+
+    <div class="content-grid sidebar">
+      <!-- Main Content -->
+      <div>
+        <!-- Revenue -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Revenue Composition</h2>
+            <span data-freshness data-source="Census Bureau"></span>
+          </div>
+          <div class="chart-container" id="revenue-chart"></div>
+        </section>
+
+        <!-- Expenditure -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Expenditure by Function</h2>
+            <span data-freshness data-source="NASBO"></span>
+          </div>
+          <div class="chart-container" id="expenditure-chart"></div>
+        </section>
+
+        <!-- 10-Year Trend -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Revenue vs. Expenditure Trend (10-Year)</h2>
+            <span data-freshness data-source="Census/FRED"></span>
+          </div>
+          <div class="chart-container" id="trend-chart"></div>
+        </section>
+
+        <!-- Pensions -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Pension System</h2>
+            <span data-freshness data-source="Public Plans Database"></span>
+          </div>
+          <p>The District of Columbia operates its own retirement system. As a federal district, DC's pension obligations have a unique history — the federal government assumed responsibility for pre-1997 pension liabilities through the National Capital Revitalization and Self-Government Improvement Act.</p>
+          <div class="summary-stats" id="pension-stats"></div>
+          <div class="chart-container" id="pension-trend-chart" style="min-height:240px;"></div>
+        </section>
+
+        <!-- Federal Dependency -->
+        <section class="section">
+          <div class="section-header">
+            <h2>Federal Dependency</h2>
+            <span data-freshness data-source="USASpending.gov"></span>
+          </div>
+          <p>Federal transfers as a percentage of total district revenue:</p>
+          <div style="display:flex;align-items:center;gap:1rem;margin:1rem 0;">
+            <div style="flex:1;background:var(--color-border-light);border-radius:4px;height:24px;overflow:hidden;">
+              <div id="fed-dependency-bar" style="height:100%;background:var(--color-data-1);border-radius:4px;transition:width 0.5s;"></div>
+            </div>
+            <span id="fed-dependency-value" style="font-size:1.25rem;font-weight:700;min-width:4em;">&mdash;</span>
+          </div>
+        </section>
+
+        <!-- Competing Lenses -->
+        <section class="section">
+          <h2>Competing Analytical Perspectives</h2>
+          <p style="font-size:0.85rem;color:var(--color-text-secondary);margin-bottom:1rem;">
+            The same fiscal data can support different policy conclusions depending on the analytical framework applied. We present three major perspectives:
+          </p>
+          <div class="lenses-container">
+            <div class="lens-card equity">
+              <div class="lens-label">Equity &amp; Adequacy</div>
+              <p>How does the District's tax structure distribute the burden across income levels? DC faces unique equity challenges as a city-state with significant income inequality, a large federal workforce, and no ability to tax the income of suburban commuters who earn wages in the District.</p>
+            </div>
+            <div class="lens-card efficiency">
+              <div class="lens-label">Efficiency &amp; Growth</div>
+              <p>DC's revenue base is constrained by the inability to tax commuter income and the presence of tax-exempt federal property covering roughly 42% of the District's land area. How do these structural limitations affect service delivery and competitiveness for residents and businesses?</p>
+            </div>
+            <div class="lens-card process">
+              <div class="lens-label">Process &amp; Governance</div>
+              <p>The District operates under congressional oversight, with Congress retaining authority to review and override DC legislation, including its budget. This creates unique governance challenges not faced by any state. DC publishes an annual ACFR and maintains its own financial reporting standards.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <div>
+        <div class="card stats-sidebar" id="key-stats">
+          <p style="color:var(--color-text-muted);">Loading...</p>
+        </div>
+
+        <div class="card" style="margin-top:1.5rem;">
+          <h4>Related</h4>
+          <ul style="list-style:none;padding:0;margin:0;font-size:0.9rem;">
+            <li style="padding:0.4rem 0;border-bottom:1px solid var(--color-border-light);">
+              <a href="/analysis/pensions.html">50-State Pension Analysis</a>
+            </li>
+            <li style="padding:0.4rem 0;border-bottom:1px solid var(--color-border-light);">
+              <a href="/states/md.html">Compare: Maryland</a>
+            </li>
+            <li style="padding:0.4rem 0;">
+              <a href="/methodology/data-sources.html">Data Sources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer"></footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="/js/charts.js"></script>
+  <script src="/js/state-profile.js"></script>
+</body>
+</html>

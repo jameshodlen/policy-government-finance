@@ -32,6 +32,7 @@ STATE_FIPS = {
     "OK": "40", "OR": "41", "PA": "42", "RI": "44", "SC": "45",
     "SD": "46", "TN": "47", "TX": "48", "UT": "49", "VT": "50",
     "VA": "51", "WA": "53", "WV": "54", "WI": "55", "WY": "56",
+    "DC": "11",
 }
 
 FIPS_TO_ABBREV = {v: k for k, v in STATE_FIPS.items()}
@@ -50,6 +51,7 @@ STATE_NAMES = {
     "SD": "South Dakota", "TN": "Tennessee", "TX": "Texas", "UT": "Utah",
     "VT": "Vermont", "VA": "Virginia", "WA": "Washington", "WV": "West Virginia",
     "WI": "Wisconsin", "WY": "Wyoming",
+    "DC": "District of Columbia",
 }
 
 # --- Fiscal Year Calendars ---

@@ -77,6 +77,7 @@ STATES = [
     ("WV", "West Virginia", "54", 1775156, 84),
     ("WI", "Wisconsin", "55", 5892539, 374),
     ("WY", "Wyoming", "56", 576851, 42),
+    ("DC", "District of Columbia", "11", 689545, 158),
 ]
 
 # States with no income tax
@@ -100,6 +101,7 @@ CREDIT_RATINGS = {
     "CT": "A+", "NJ": "A+",
     "IL": "BBB+",
     "AK": "AA",
+    "DC": "AA+",
 }
 
 # Pension funded ratios (calibrated to PPD FY2023 data)
@@ -114,6 +116,7 @@ PENSION_FUNDED = {
     "RI": 68.1, "MA": 67.4, "PA": 66.8, "WY": 66.2, "CO": 65.5,
     "NV": 64.9, "LA": 64.3, "HI": 63.2, "MS": 62.1, "AK": 61.4,
     "SC": 60.8, "CT": 52.3, "KY": 49.8, "NJ": 44.7, "IL": 40.1,
+    "DC": 91.2,
 }
 
 # Pew revenue volatility index (calibrated to real data)
@@ -128,6 +131,7 @@ VOLATILITY = {
     "OH": 8.0, "WI": 7.7, "MO": 7.4, "KS": 7.1, "KY": 6.8,
     "MS": 6.5, "AL": 6.2, "IA": 5.9, "NE": 5.6, "ME": 5.3,
     "RI": 5.0, "VT": 4.8, "SD": 4.5, "DE": 4.3, "AR": 4.0,
+    "DC": 18.5,
 }
 
 # Reserve days (Pew data, calibrated)
@@ -143,6 +147,7 @@ RESERVE_DAYS = {
     "HI": 9, "NV": 8, "RI": 7, "MS": 6, "NY": 5,
     "VT": 4, "CT": 3, "PA": 8, "IL": 2,
     "NJ": 0,
+    "DC": 30,
 }
 
 
@@ -429,9 +434,9 @@ def main():
         }, f, indent=2)
     print(f"  Wrote {summary_path}")
 
-    # State profiles for WI and MN
-    for abbrev in ("wi", "mn"):
-        state = next(s for s in states if s["abbrev"] == abbrev.upper())
+    # State profiles for all 50 states + DC
+    for state in states:
+        abbrev = state["abbrev"].lower()
         profile = generate_state_profile(state)
         profile_dir = SITE_DATA / abbrev
         profile_dir.mkdir(parents=True, exist_ok=True)

@@ -3,7 +3,7 @@
   "source": "Public Plans Database (Boston College CRR)",
   "sample": true,
   "nationalFundedRatio": 77.4,
-  "totalUnfundedLiability": 1342736864141,
+  "totalUnfundedLiability": 1343645712240,
   "states": [
     {
       "abbrev": "WI",
@@ -43,6 +43,16 @@
       "annualContribution": 434438241,
       "contributionAsPercentRevenue": 0.7,
       "unfundedAsPercentRevenue": 11.4,
+      "highlight": false
+    },
+    {
+      "abbrev": "DC",
+      "name": "District of Columbia",
+      "fundedRatio": 91.2,
+      "unfundedLiability": 908848099,
+      "annualContribution": 52907488,
+      "contributionAsPercentRevenue": 0.7,
+      "unfundedAsPercentRevenue": 12.3,
       "highlight": false
     },
     {

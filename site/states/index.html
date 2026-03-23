@@ -18,7 +18,7 @@
     </div>
 
     <div class="card" style="border-left:3px solid var(--color-accent);margin-bottom:2rem;">
-      <p style="margin:0;font-size:0.9rem;">Detailed fiscal profiles are available for <a href="/states/wi.html">Wisconsin</a> and <a href="/states/mn.html">Minnesota</a>. Additional state profiles are coming soon.</p>
+      <p style="margin:0;font-size:0.9rem;">Detailed fiscal profiles are available for all 50 states and DC. Click any state name to view its full fiscal profile.</p>
     </div>
 
     <section class="section">
@@ -34,18 +34,13 @@
   <script src="/js/charts.js"></script>
   <script>
     (function() {
-      var PROFILE_STATES = ['wi', 'mn'];
-
       var TABLE_COLUMNS = [
         {
           key: 'name',
           label: 'State',
           render: function(val, d) {
             var abbr = d.abbrev.toLowerCase();
-            if (PROFILE_STATES.indexOf(abbr) >= 0) {
-              return '<a class="state-link" href="/states/' + abbr + '.html">' + val + '</a>';
-            }
-            return '<strong>' + val + '</strong>';
+            return '<a class="state-link" href="/states/' + abbr + '.html">' + val + '</a>';
           },
         },
         { key: 'abbrev', label: 'Abbrev' },
